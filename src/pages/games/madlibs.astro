@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/container.astro";
+import Sectionhead from "../../components/sectionhead.astro";
+---
+
+<Layout title="About">
+    <Container>
+        <Sectionhead>
+            <Fragment slot="title">Variables</Fragment>
+            <Fragment slot="desc">Madlibs</Fragment>
+        </Sectionhead>
+        <div
+            class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl m-4"
+        >
+            <div class="p-8">
+                <p class="text-lg font-medium mb-4">
+                    Samantha was a
+                    <select
+                        class="inline-block bg-white border-2 border-gray-300 text-gray-700 p-2 rounded-md w-auto text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                        <option value="curious">curious</option>
+                        <option value="determined">determined</option>
+                        <option value="creative">creative</option>
+                    </select>
+                    college student who had always been interested in
+                    <select
+                        class="inline-block bg-white border-2 border-gray-300 text-gray-700 p-2 rounded-md w-auto text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                        <option value="technology">technology</option>
+                        <option value="music">music</option>
+                        <option value="photography">photography</option>
+                    </select>
+                    decided to try
+                    <select
+                        class="inline-block bg-white border-2 border-gray-300 text-gray-700 p-2 rounded-md w-auto text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                        <option value="coding">coding</option>
+                        <option value="cooking">cooking</option>
+                        <option value="rock climbing">rock climbing</option>
+                    </select> for the first time.
+                </p>
+            </div>
+        </div>
+    </Container>
+</Layout>
