@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/container.astro";
+import Sectionhead from "../../components/sectionhead.astro";
+---
+
+<Layout title="About">
+    <Container>
+        <Sectionhead>
+            <Fragment slot="title">Day 1</Fragment>
+            <Fragment slot="desc">Introduction to Web Development & Project Planning</Fragment>
+        </Sectionhead>
+            <div class="max-w-3xl mx-auto p-6 text-gray-700">
+Hello world
+        </div>
+        <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
+    </Container>
+</Layout>
