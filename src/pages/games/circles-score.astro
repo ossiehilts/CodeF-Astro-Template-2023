@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/container.astro";
+import Sectionhead from "../../components/sectionhead.astro";
+---
+
+<Layout title="Click the Circles">
+    <Container>
+        <Sectionhead>
+            <Fragment slot="title">Click the Circles</Fragment>
+            <Fragment slot="desc">
+                A simple game to learn some JavaScript
+            </Fragment>
+        </Sectionhead>
+        <div
+            class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl m-4"
+        >
+            <section class="container">
+                <p id="score">Score: 0</p>
+                <p id="time">Time: 10</p>
+                <button id="start-button">Start Game</button>
+                <div class="game-area">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </section>
+        </div>
+    </Container>
+</Layout>
+
+<script>
+    let score = 0;
+    let time = 10;
+    let isGameRunning = false;
+
+    const startGame = () => {
+        isGameRunning = true;
+        score = 0;
+        time = 10;
+        updateTime();
+        updateScore();
+
+        const timer = setInterval(() => {
+            if (time > 0) {
+                time--;
+                updateTime();
+            } else {
+                clearInterval(timer);
+                isGameRunning = false;
+            }
+        }, 1000);
+    };
+
+    const updateScore = () => {
+        document.getElementById("score").textContent = `Score: ${score}`;
+    };
+
+    const updateTime = () => {
+        document.getElementById("time").textContent = `Time: ${time}`;
+    };
+
+    const increaseScore = () => {
+        if (isGameRunning) {
+            score++;
+            updateScore();
+        }
+    };
+
+    const startButton = document.getElementById("start-button");
+    const circles = document.querySelectorAll(".circle");
+
+    startButton.addEventListener("click", startGame);
+    circles.forEach((circle) => {
+        circle.addEventListener("click", increaseScore);
+    });
+</script>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .game-area {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        background-color: #ff5733;
+        border-radius: 50%;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
