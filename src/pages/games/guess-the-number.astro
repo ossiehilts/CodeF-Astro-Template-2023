@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/container.astro";
+import Sectionhead from "../../components/sectionhead.astro";
+---
+
+<Layout title="Guess The Number">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Guess the number</Fragment>
+      <Fragment slot="desc">A simple game to learn some JavaScript</Fragment>
+    </Sectionhead>
+    <div
+      class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl m-4"
+    >
+      <guess-the-number class="p-8">
+        <p>Guess a number between 1 and 100:</p>
+        <input
+          class="border-solid border-2 border-slate-400"
+          type="number"
+          id="guess"
+          min="1"
+          max="100"
+        />
+        <button id="check">Check</button>
+        <p id="message"></p>
+      </guess-the-number>
+    </div>
+  </Container>
+</Layout>
+
+<script>
+  const randomNumber = Math.floor(Math.random() * 100) + 1;
+  const button = document.getElementById("check");
+  button.addEventListener("click", () => {
+    const guess = parseInt(document.getElementById("guess").value);
+    if (isNaN(guess) || guess < 1 || guess > 100) {
+      document.getElementById("message").innerHTML =
+        "Please enter a valid number between 1 and 100.";
+    } else if (guess === randomNumber) {
+      document.getElementById("message").innerHTML =
+        "Congratulations! You guessed the correct number.";
+    } else if (guess < randomNumber) {
+      document.getElementById("message").innerHTML = "Try a higher number.";
+    } else {
+      document.getElementById("message").innerHTML = "Try a lower number.";
+    }
+  });
+</script>
+
+<style>
+  body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    margin-top: 100px;
+  }
+  h1 {
+    color: #333;
+  }
+  p {
+    color: #666;
+  }
+  input {
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+  }
+</style>
