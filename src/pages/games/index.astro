@@ -1,18 +1,52 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Container from "../../components/container.astro";
-import Sectionhead from "../../components/sectionhead.astro";
 ---
 
-<Layout title="About">
-    <Container>
-        <Sectionhead>
-            <Fragment slot="title">Day 1</Fragment>
-            <Fragment slot="desc">Introduction to Web Development & Project Planning</Fragment>
-        </Sectionhead>
-            <div class="max-w-3xl mx-auto p-6 text-gray-700">
-Hello world
+<Layout title="Games">
+    <main>
+        <h1>Games</h1>
+        <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:flex">
+            <a
+                href="/games/madlibs"
+                class="text-base font-medium text-black hover:text-indigo-50"
+            >
+                Madlibs
+            </a>
+            <a
+                href="/games/guess-the-number"
+                class="text-base font-medium text-black hover:text-indigo-50"
+            >
+                Guess the Number
+            </a>
+            <a
+                href="/games/circles-score"
+                class="text-base font-medium text-black hover:text-indigo-50"
+            >
+                Circles Score
+            </a>
         </div>
-        <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
-    </Container>
+    </main>
 </Layout>
+
+<style>
+    :root {
+        --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+    }
+
+    h1 {
+        margin: 2rem 0;
+    }
+
+    main {
+        margin: auto;
+        padding: 1em;
+        max-width: 80ch;
+    }
+
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 1rem;
+        padding: 0;
+    }
+</style>
