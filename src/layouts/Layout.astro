@@ -1,4 +1,5 @@
 ---
+import CircleText from "../components/CircleText";
 export interface Props {
 	title: string;
 }
@@ -23,81 +24,17 @@ const { title } = Astro.props as Props;
 				<div class="max-w-sm mx-auto text-center text-white">
 					<img src="/logo.png" />
 				</div>
-				<nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
-					<div class="flex w-full py-6 lg:border-none">
-						<div class="flex">
-							<a href="/"
-								><span class="sr-only">Astro Starter</span></a
-							>
-							<div
-								class="ml-10 hidden space-x-8 lg:hidden sm:block"
-							>
-								<a
-									href="/"
-									class="text-base font-medium text-white hover:text-indigo-50"
-									>Home</a
-								>
-							</div>
+				<nav
+					class="fixed bottom-5 right-0 mx-auto max-w-7xl px-6 lg:px-8"
+					aria-label="Top"
+				>
+					<CircleText>
+						<div
+							class="bg-pink-400 inline-block rounded-full p-5 shadow-xl hover:p-15"
+						>
+							<img src="/suitcase.svg" class="w-10" />
 						</div>
-					</div>
-					<div
-						class="flex flex-wrap justify-center gap-x-6 py-4 lg:flex"
-					>
-						<a
-							href="/"
-							class="text-base font-medium text-white hover:text-indigo-50"
-						>
-							Home
-						</a>
-						<a
-							href="/about"
-							class="text-base font-medium text-white hover:text-indigo-50"
-						>
-							About
-						</a>
-						<a
-							href="/kanban"
-							class="text-base font-medium text-white hover:text-indigo-50"
-						>
-							Kanban
-						</a>
-						<a
-							href="/day-one"
-							class="text-base font-medium text-white hover:text-indigo-50"
-						>
-							Day 1
-						</a>
-						<a
-							href="/day-two"
-							class="text-base font-medium text-white hover:text-indigo-50"
-						>
-							Day 2
-						</a>
-						<a
-							href="/day-three"
-							class="text-base font-medium text-white hover:text-indigo-50"
-						>
-							Day 3
-						</a>
-						<a
-							href="/day-four"
-							class="text-base font-medium text-white hover:text-indigo-50"
-						>
-							Day 4
-						</a>
-						<a
-							href="/show-case"
-							class="text-base font-medium text-white hover:text-indigo-50"
-						>
-							Showcase
-						</a>
-						<a
-							href="/games"
-							class="text-base font-medium text-white hover:text-indigo-50"
-						>
-							Games
-						</a>
-					</div>
+					</CircleText>
 				</nav>
 			</div>
 		</header>
