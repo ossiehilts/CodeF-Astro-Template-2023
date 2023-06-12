@@ -1,0 +1,47 @@
+<astro>
+  <div>
+    <div class="p-5 flex">
+      <input
+        id="check"
+        class={`mx-4 inline-block bg-yellow-300 block rounded-sm w-4 h-4 mt-1 align-middle cursor-pointer bg-blue-300}`}
+        type="checkbox"
+      />
+      <label>I have understood the above</label>
+    </div>
+    <button
+      id="advance"
+      class={`bg-gradient-to-r from-purple-500 to-blue-500 text-white py-4 px-8 rounded-full inline-flex items-center transition-colors`}
+    >
+      <span>Let's go!</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class="h-5 w-5 ml-2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</astro>
+
+<script>
+  const checkbox = document.querySelector("#check");
+  const advance = document.querySelector("#advance");
+
+  let elemClasses = advance.className;
+
+  checkbox.addEventListener("load change", function () {
+    advance.className =
+      elemClasses +
+      " " +
+      (this.checked
+        ? "bg-gradient-to-r from-purple-500 to-blue-500"
+        : "bg-gradient-to-r from-purple-300 to-blue-100");
+  });
+</script>
