@@ -4,6 +4,7 @@ import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
 import TextAndImage from "../components/TextAndImage.astro";
 import TextEditor from "../components/TextEditor.tsx";
+import CodeSandbox from "../components/CodeSandbox.astro";
 ---
 
 <Layout title="Day 2">
@@ -23,21 +24,21 @@ import TextEditor from "../components/TextEditor.tsx";
                 content="HTML (HyperText Markup Language): Imagine you're building a LEGO castle. The HTML is like the grey LEGO bricks that you use to construct the castle's walls, the towers, and the main gate. It gives the basic shape and structure to your castle."
                 imageURL="/day2/grey-bricks.png"
             />
-            <TextEditor client:only />
+            <CodeSandbox sandbox="elated-williamson-ynfx5k" />
             <hr />
             <TextAndImage
                 title="CSS"
                 content="CSS (Cascading Style Sheets): CSS is like the instructions that tell you to put the biggest tower in the middle, the walls on the sides, and how to build a bridge at the front. It might tell you to put some green bricks at the bottom to make it look like the castle is on a grassy hill. CSS is the part that makes your castle pretty and colorful. It decides where each part of your castle goes, what color the bricks are, and how big or small they should be."
                 imageURL="/day2/crane-bricks.png"
             />
-            <TextEditor client:only />
+            <CodeSandbox />
             <hr />
             <TextAndImage
                 title="JavaScript"
                 content="Now, imagine you've got some magic LEGO bricks. These magic bricks can open the castle gate when you shout 'Open Sesame!', or make the castle guards march up and down the walls. JavaScript is like these magic bricks. It makes your castle do things. With JavaScript, you can make parts of your webpage move, respond to clicks or typing, or change in any way you can imagine."
                 imageURL="/day2/magic-brick.png"
             />
-            <TextEditor client:only />
+            <CodeSandbox />
         </div>
     </Container>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
