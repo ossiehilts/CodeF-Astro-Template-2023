@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/container.astro";
+import Sectionhead from "../../components/sectionhead.astro";
+import Kanban from "../../components/kanban";
+---
+
+<Layout title="Kanban">
+    <Container>
+        <Sectionhead>
+            <Fragment slot="title">Kanban</Fragment>
+            <Fragment slot="desc">Keeping track of your progress</Fragment>
+        </Sectionhead>
+        <Kanban client:load />
+        <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
+    </Container>
+</Layout>
+
+<script>
+    window.process = {
+        env: {},
+    };
+</script>

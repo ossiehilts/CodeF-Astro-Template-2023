@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/container.astro";
+import Sectionhead from "../../components/sectionhead.astro";
+import TailwindColours from "../../components/TailwindColours.tsx";
+---
+
+<Layout title="CSS tools">
+    <Container>
+        <Sectionhead>
+            <Fragment slot="title">CSS tools</Fragment>
+            <Fragment slot="desc">
+                Tailwind and CSS tools to help you develop
+            </Fragment>
+        </Sectionhead>
+        <div class="max-w-3xl mx-auto p-6 text-gray-700">
+            <h2>Counting and bases</h2>
+            <TailwindColours client:load />
+        </div>
+        <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
+    </Container>
+</Layout>
+
+<style>
+    p {
+        margin: 2em 0;
+        line-height: 200%;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>

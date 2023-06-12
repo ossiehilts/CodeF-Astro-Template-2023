@@ -13,15 +13,9 @@ export default function BinaryCounter() {
       if (counter < 255) {
         setCounter((count) => count + 1); 
       }
-    }, 500);
+    }, 50);
     return () => clearInterval(interval);
   }, [setCounter, counter]);
 
-  return (
-    <div>
-      <div>
-      </div>
-      <BinaryLEDs counter={counter % 256} />
-    </div>
-  );
+  return <BinaryLEDs counter={counter % 256} withSum />;
 }

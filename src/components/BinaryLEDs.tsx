@@ -2,7 +2,13 @@ import React from "react";
 
 const binaryLeds = [128, 64, 32, 16, 8, 4, 2, 1];
 
-export default function BinaryCounter({ counter }: { counter: number }) {
+export default function BinaryLEDsBinaryLEDs({
+  counter,
+  withSum,
+}: {
+  counter: number;
+  withSum: boolean;
+}) {
   const [currentLights, setCurrentLights] = React.useState<boolean>(
     new Array(8).fill(false)
   );
@@ -21,7 +27,7 @@ export default function BinaryCounter({ counter }: { counter: number }) {
     }, counter);
 
     setCurrentLights(newLights); // set state once after all updates
-  }, [counter, currentLights]); // We only need to list 'counter' as a dependency here
+  }, [counter]); // We only need to list 'counter' as a dependency here
 
   return (
     <div className="font-mono">
@@ -43,12 +49,24 @@ export default function BinaryCounter({ counter }: { counter: number }) {
           </div>
         ))}
       </div>
-      <div className="mb-4">
-          As a sum . . . 
+      {withSum && (
+        <React.Fragment>
+          <div className="mb-4">As a sum . . .</div>
+          <div className="flex">
+            <span>
+              {binaryLeds
+                .filter((_, index) => !!currentLights[index])
+                .join(" + ")}{" "}
+            </span>
+            <span className="font-semibold">
+              <span className="ml-2">=</span>{" "}
+              <span className="p-2 rounded shadow-xl bg-green-500 text-white">
+                {counter}
+              </span>
+            </span>
           </div>
-      <div className="flex">
-        <span>{binaryLeds.filter((_, index) => !!currentLights[index]).join(" + ")} </span><span className="font-semibold"><span className="ml-2">=</span> <span className="p-2 rounded shadow-xl bg-green-500 text-white">{counter}</span></span>
-      </div>
+        </React.Fragment>
+      )}
     </div>
   );
 }

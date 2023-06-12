@@ -4,6 +4,8 @@ import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
 import HandCounter from "../components/HandCounter.tsx";
 import BinaryCounter from "../components/BinaryCounter.tsx";
+import BinaryTextConverter from "../components/BinaryTextConverter.tsx";
+import TLDR from "../components/TLDR.astro"
 ---
 
 <Layout title="About">
@@ -16,9 +18,46 @@ import BinaryCounter from "../components/BinaryCounter.tsx";
             </Fragment>
         </Sectionhead>
         <div class="max-w-3xl mx-auto p-6 text-gray-700">
+            <h2>Counting and bases</h2>
+            <TLDR />
+            <p>As humans, we naturally have ten fingers, including our thumbs. So, when we first started learning how to count things, we used our fingers as tools for keeping track. If you have five apples, you can hold up five fingers – one for each apple. And if you have ten apples, you can hold up all of your fingers.</p>
+
+            <p>Because we have ten fingers, it made sense to develop a counting system – or 'base' – based on ten. This system is called the decimal system or 'base 10'. Each digit in a number can be anything from 0 to 9, which is ten different possibilities.</p>
+
+            <p>This doesn't mean it's the only way of counting, though. Computers, for example, use a 'base 2' system – binary – because it's simpler for them. But for us humans, 'base 10' is just what we're used to because of our ten fingers!</p>
+            <HandCounter client:load />
+            <p>
+                Imagine you have a set of 8 light switches on a wall, each of which can be either "on" (which we'll call "1") or "off" (which we'll call "0"). Now, we could just turn these switches on or off to make a cool pattern of lights, but what if we want to use these switches to communicate something more specific?
+            </p>
+            <p>
+                This is essentially what we're doing with binary numbers. Instead of just making pretty patterns, we're using specific patterns of "on" and "off" (or "1" and "0") to represent specific things.
+            </p>
+            <TLDR />
             <h3 class="text-xl font-semibold mb-2">Binary Counter</h3>
             <BinaryCounter client:load />
+            <p>In the case of ASCII characters, we've agreed on a specific set of binary numbers (patterns of 1's and 0's) to represent specific characters. For example, the number 65 (which is 01000001 in binary) represents the capital letter "A".</p>
+
+            <p>So, if we wanted to represent the letter "A" with our wall of light switches, we would turn off the first three switches (to represent the three 0's at the start of the binary number), turn on the fourth switch (to represent the 1), and then turn off the last four switches (to represent the four 0's at the end). And when someone else saw this pattern of switches, they would know that it represents the letter "A"!</p>
+
+            <p>And that's basically how we use binary numbers to represent things like ASCII characters. We simply agree on a specific set of patterns, and then we use those patterns to communicate specific things. It's kind of like a secret code that we've all agreed to use!</p>
+            
+            <BinaryTextConverter client:load />
+            <TLDR />
+            <h2>Counting and bases</h2>
         </div>
         <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
     </Container>
 </Layout>
+
+<style>
+    p {
+        margin: 2em 0;
+        line-height: 200%;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
