@@ -11,13 +11,7 @@ import Kanban from "../../components/kanban";
             <Fragment slot="title">Kanban</Fragment>
             <Fragment slot="desc">Keeping track of your progress</Fragment>
         </Sectionhead>
-        <Kanban client:load />
+        <Kanban client:only />
         <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
     </Container>
 </Layout>
-
-<script>
-    window.process = {
-        env: {},
-    };
-</script>

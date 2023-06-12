@@ -24,7 +24,7 @@ import TextEditor from "../components/TextEditor.tsx";
                 construct the castle's walls, the towers, and the main gate. It
                 gives the basic shape and structure to your castle.
             </p>
-            <TextEditor client:load />
+            <TextEditor client:only />
             <h3 class="mt-10 text-2xl font-bold mb-4">CSS</h3>
             <p>
                 CSS (Cascading Style Sheets): CSS is like the instructions that
@@ -36,7 +36,7 @@ import TextEditor from "../components/TextEditor.tsx";
                 castle goes, what color the bricks are, and how big or small
                 they should be.
             </p>
-            <TextEditor client:load />
+            <TextEditor client:only />
             <h3 class="mt-10 text-2xl font-bold mb-4">JavaScript</h3>
             <p>
                 JavaScript: Now, imagine you've got some magic LEGO bricks.
@@ -47,7 +47,7 @@ import TextEditor from "../components/TextEditor.tsx";
                 move, respond to clicks or typing, or change in any way you can
                 imagine.
             </p>
-            <TextEditor client:load />
+            <TextEditor client:only />
         </div>
     </Container>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
