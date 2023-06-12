@@ -1,43 +1,53 @@
-import React, { useEffect } from 'react';
-import Prism from 'prismjs';
-import 'prismjs/themes/prism-tomorrow.css'; 
+import React, { useEffect, useRef, useState } from "react";
+import brace from "brace";
+import InteractiveWrapper from "./InteractiveWrapper";
+import "brace/theme/tomorrow_night";
+import "brace/mode/javascript";
 
-const TextEditor = ({ lineNumber = 1 }) => {
+function BraceEditor() {
+  const editorRef = useRef(null);
+  const [editor, setEditor] = useState(null);
+  const [codeCheckResult, setCodeCheckResult] = useState("");
+
   useEffect(() => {
-    Prism.highlightAll();
+    const braceEditor = brace.edit(editorRef.current);
+    braceEditor.getSession().setMode("brace/mode/javascript");
+    braceEditor.setTheme("brace/theme/tomorrow_night");
+    braceEditor.setFontSize(18);
+    setEditor(braceEditor);
   }, []);
 
-  return (
-    <div className="relative p-6 max-w-md mx-auto rounded-xl shadow-md" style={{ background: '#2d2d2d' }}>
-      <div className="relative flex">
-        <div className="flex flex-col items-center justify-center mr-4">
-          <p className="text-gray-500">{lineNumber}</p>
-        </div>
-        <code
-        id="code"
-          className="language-javascript w-full text-sm bg-transparent text-transparent caret-white focus:outline-none text-lg h-3"
-          contentEditable
-onInput={e => {
-    document.getElementById('code').innerText = e.target.innerText;
-    Prism.highlightAll();
-
-    // Get a range object representing the end of the content
-    const range = document.createRange();
-    range.selectNodeContents(e.target);
-    range.collapse(false);
-
-    // Get the window's selection object and update it with the new range
-    const selection = window.getSelection();
-    if (selection) {
-        selection.removeAllRanges();
-        selection.addRange(range);
+  const checkCode = () => {
+    try {
+      // console.log(editor.getValue());
+      // setCodeCheckResult("Code is valid!");
+    } catch (error) {
+      // setCodeCheckResult("Code is invalid: " + error.message);
     }
-}}
+  };
 
-        />
+  return (
+    <InteractiveWrapper title="Try coding">
+      <div
+        id="brace-editor"
+        ref={editorRef}
+        style={{ width: "100%", height: "100px" }}
+      />
+      <div className="flex flex-row w-full">
+        <div className="w-full">
+          <p className="p-2 text-gray-400 bg-gray-700 font-mono text-xs">
+            Output
+          </p>
+          <p className="p-2 bg-gray-700 font-mono text-sm">
+            {">"} hello world {codeCheckResult}
+          </p>
+        </div>
+        <button className="p-5 bg-pink-400 inline-block" onClick={checkCode}>
+          &#9658;
+        </button>
       </div>
-    </div>
+    </InteractiveWrapper>
   );
 }
 
-export default TextEditor;
+export default BraceEditor;

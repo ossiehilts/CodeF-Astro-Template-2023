@@ -2,21 +2,59 @@
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
+
+import BusinessCard from "../components/BusinessCard.astro";
 ---
 
 <Layout title="About">
     <Container>
         <Sectionhead>
             <Fragment slot="title">About</Fragment>
-            <Fragment slot="desc">We are a small team.</Fragment>
+            <Fragment slot="desc">The CodeF team!</Fragment>
         </Sectionhead>
 
         <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-            <h2 class="font-bold text-3xl text-gray-800">
-                I am the About Page
-            </h2>
-            <p class="text-lg leading-relaxed text-slate-500"></p>
+            <ul role="list" class="link-card-grid">
+                <BusinessCard
+                    name="Alvaro Iturmendi"
+                    profession="Paid Media"
+                    imageURL="./team/alvaro.jpeg"
+                />
+                <BusinessCard
+                    name="Safiyah Raj"
+                    imageURL="./team/safiyah.png"
+                />
+            </ul>
+            <ul role="list" class="link-card-grid">
+                <BusinessCard
+                    name="Kumsy Thomas"
+                    profession="Product Manager"
+                    imageURL="./team/kumsey.jpeg"
+                />
+                <BusinessCard name="Molly Hudson" imageURL="./team/molly.png" />
+            </ul>
+            <ul role="list" class="link-card-grid">
+                <BusinessCard
+                    name="Oscar Hilton"
+                    profession="Primary lecturer"
+                    imageURL="./team/oscar.jpeg"
+                />
+                <BusinessCard
+                    name="Hannah Lynn"
+                    profession="Secondary lecturer"
+                    imageURL="./team/hannah.png"
+                />
+            </ul>
         </div>
         <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
     </Container>
 </Layout>
+
+<style>
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 1rem;
+        padding: 0;
+    }
+</style>
