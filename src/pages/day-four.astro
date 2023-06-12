@@ -2,34 +2,54 @@
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
-
 ---
 
-<Layout title="About">
+<Layout title="Day 4">
     <Container>
         <Sectionhead>
             <Fragment slot="title">Day 4</Fragment>
-            <Fragment slot="desc">Web Development Tools & Interactive Learning</Fragment>
+            <Fragment slot="desc">
+                Web Development Tools & Interactive Learning
+            </Fragment>
         </Sectionhead>
-            <div class="max-w-3xl mx-auto p-6 text-gray-700">
-                <h2 class="text-2xl font-bold mb-4">Welcome to  coding journey!</h2>
+        <div class="max-w-3xl mx-auto p-6 text-gray-700">
+            <h2 class="text-2xl font-bold mb-4">Welcome to coding journey!</h2>
 
-                <h3 class="text-xl font-semibold mb-2">Here's a simple, step-by-step guide to help you sign up for GitHub:</h3>
+            <h3 class="text-xl font-semibold mb-2">
+                Here's a simple, step-by-step guide to help you sign up for
+                GitHub:
+            </h3>
 
-                <ol class="list-decimal pl-5">
-                    <li class="mb-2">Visit the GitHub website: Open your favorite browser and navigate to <a href="https://github.com" class="text-blue-600 underline">https://github.com</a>.</li>
-                </ol>
-            </div>
-            <div class="max-w-3xl mx-auto p-6 text-gray-700">
-                <h2 class="text-2xl font-bold mb-4">Welcome to your coding journey!</h2>
-
-                <h3 class="text-xl font-semibold mb-2">Here's a simple, step-by-step guide to help you sign up for GitHub:</h3>
-
-                <ol class="list-decimal pl-5">
-                    <li class="mb-2">Visit the GitHub website: Open your favorite browser and navigate to <a href="https://github.com" class="text-blue-600 underline">https://github.com</a>.</li>
-                </ol>
-            </div>
+            <ol class="list-decimal pl-5">
+                <li class="mb-2">
+                    Visit the GitHub website: Open your favorite browser and
+                    navigate to <a
+                        href="https://github.com"
+                        class="text-blue-600 underline">https://github.com</a
+                    >.
+                </li>
+            </ol>
         </div>
-        <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
+        <div class="max-w-3xl mx-auto p-6 text-gray-700">
+            <h2 class="text-2xl font-bold mb-4">
+                Welcome to your coding journey!
+            </h2>
+
+            <h3 class="text-xl font-semibold mb-2">
+                Here's a simple, step-by-step guide to help you sign up for
+                GitHub:
+            </h3>
+
+            <ol class="list-decimal pl-5">
+                <li class="mb-2">
+                    Visit the GitHub website: Open your favorite browser and
+                    navigate to <a
+                        href="https://github.com"
+                        class="text-blue-600 underline">https://github.com</a
+                    >.
+                </li>
+            </ol>
+        </div>
     </Container>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
 </Layout>

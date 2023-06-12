@@ -34,11 +34,7 @@ export default function BinaryLEDsBinaryLEDs({
       <div className="flex">
         {binaryLeds.map((value, index) => (
           <div className="flex flex-col items-center mr-2 mb-4" key={index}>
-            <div
-              className={`font-semibold text-green-${
-                counter & value ? "500" : "900"
-              }`}
-            >
+            <div className={`text-green-${counter & value ? "500" : "900"}`}>
               {value}
             </div>
             <div

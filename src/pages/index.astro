@@ -1,15 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import FAQ from "../components/FAQ.astro";
-import TextAndImage from "../components/TextAndImage.astro";
 import TextEditor from "../components/TextEditor.tsx";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<TextEditor client:load />
-		<TextAndImage />
-		<FAQ />
 	</main>
 </Layout>
 

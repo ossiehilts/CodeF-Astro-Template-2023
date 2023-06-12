@@ -2,34 +2,53 @@
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
-
+import TextEditor from "../components/TextEditor.tsx";
 ---
 
-<Layout title="About">
+<Layout title="Day 2">
     <Container>
         <Sectionhead>
             <Fragment slot="title">Day 2</Fragment>
-            <Fragment slot="desc">Web Development Tools & Interactive Learning</Fragment>
+            <Fragment slot="desc">
+                Web Development Tools & Interactive Learning
+            </Fragment>
         </Sectionhead>
-            <div class="max-w-3xl mx-auto p-6 text-gray-700">
-                <h2 class="text-2xl font-bold mb-4">Welcome to coding journey!</h2>
-
-                <h3 class="text-xl font-semibold mb-2">Here's a simple, step-by-step guide to help you sign up for GitHub:</h3>
-
-                <ol class="list-decimal pl-5">
-                    <li class="mb-2">Visit the GitHub website: Open your favorite browser and navigate to <a href="https://github.com" class="text-blue-600 underline">https://github.com</a>.</li>
-                </ol>
-            </div>
-            <div class="max-w-3xl mx-auto p-6 text-gray-700">
-                <h2 class="text-2xl font-bold mb-4">Welcome to your coding journey!</h2>
-
-                <h3 class="text-xl font-semibold mb-2">Here's a simple, step-by-step guide to help you sign up for GitHub:</h3>
-
-                <ol class="list-decimal pl-5">
-                    <li class="mb-2">Visit the GitHub website: Open your favorite browser and navigate to <a href="https://github.com" class="text-blue-600 underline">https://github.com</a>.</li>
-                </ol>
-            </div>
+        <div class="max-w-3xl mx-auto p-6 text-gray-700">
+            <h2 class="text-3xl font-bold mb-4">
+                Building your website like a Lego castle
+            </h2>
+            <h3 class="mt-10 text-2xl font-bold mb-4">HTML</h3>
+            <p>
+                HTML (HyperText Markup Language): Imagine you're building a LEGO
+                castle. The HTML is like the grey LEGO bricks that you use to
+                construct the castle's walls, the towers, and the main gate. It
+                gives the basic shape and structure to your castle.
+            </p>
+            <TextEditor client:load />
+            <h3 class="mt-10 text-2xl font-bold mb-4">CSS</h3>
+            <p>
+                CSS (Cascading Style Sheets): CSS is like the instructions that
+                tell you to put the biggest tower in the middle, the walls on
+                the sides, and how to build a bridge at the front. It might tell
+                you to put some green bricks at the bottom to make it look like
+                the castle is on a grassy hill. CSS is the part that makes your
+                castle pretty and colorful. It decides where each part of your
+                castle goes, what color the bricks are, and how big or small
+                they should be.
+            </p>
+            <TextEditor client:load />
+            <h3 class="mt-10 text-2xl font-bold mb-4">JavaScript</h3>
+            <p>
+                JavaScript: Now, imagine you've got some magic LEGO bricks.
+                These magic bricks can open the castle gate when you shout "Open
+                Sesame!", or make the castle guards march up and down the walls.
+                JavaScript is like these magic bricks. It makes your castle do
+                things. With JavaScript, you can make parts of your webpage
+                move, respond to clicks or typing, or change in any way you can
+                imagine.
+            </p>
+            <TextEditor client:load />
         </div>
-        <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
     </Container>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
 </Layout>
