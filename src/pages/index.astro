@@ -1,39 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import BusinessCard from "../components/BusinessCard.astro";
 import FAQ from "../components/FAQ.astro";
 import TextAndImage from "../components/TextAndImage.astro";
 import TextEditor from "../components/TextEditor.tsx";
-
-
-
-import { useEffect, useState } from 'react';
-import Prismic from 'prismic-javascript';
-import { Date, Link, RichText } from 'prismic-reactjs';
-
-let apiEndpoint = 'https://your-repo-name.cdn.prismic.io/api/v2';
-let accessToken = ''; // if you have a private repo
-
-let Client = Prismic.client(apiEndpoint, { accessToken });
-
-let prismicData = [];
-
-const fetchData = async () => {
-    const response = await Client.query(
-    Prismic.Predicates.at('document.type', 'blog_post')
-    // could be any other document type
-    );
-    if (response) {
-        prismicData = response.results;
-    }
-};
-
-fetchData();
-
-
-
-
 ---
 
 <Layout title="Welcome to Astro.">
@@ -41,34 +10,6 @@ fetchData();
 		<TextEditor client:load />
 		<TextAndImage />
 		<FAQ />
-		<ul role="list" class="link-card-grid">
-			<BusinessCard
-				name="Saf"
-				profession="Primary lecturer"
-				description="Foobar"
-				imageURL="./oscar.jpeg"
-			/>
-			<BusinessCard
-				name="Oscar Hilton"
-				profession="Primary lecturer"
-				description="Foobar"
-				imageURL="./oscar.jpeg"
-			/>
-		</ul>
-		<ul role="list" class="link-card-grid">
-			<BusinessCard
-				name="Oscar Hilton"
-				profession="Primary lecturer"
-				description="Foobar"
-				imageURL="./oscar.jpeg"
-			/>
-			<BusinessCard
-				name="Oscar Hilton"
-				profession="Primary lecturer"
-				description="Foobar"
-				imageURL="./oscar.jpeg"
-			/>
-		</ul>
 	</main>
 </Layout>
 
@@ -85,12 +26,5 @@ fetchData();
 		margin: auto;
 		padding: 1em;
 		max-width: 80ch;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
 	}
 </style>
