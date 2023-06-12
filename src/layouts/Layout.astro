@@ -13,7 +13,7 @@ const { title } = Astro.props as Props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>CodeF 2023 - {title}</title>
 	</head>
 	<body>
 		<header class="bg-indigo-900 mb-3">
@@ -54,6 +54,12 @@ const { title } = Astro.props as Props;
 							class="text-base font-medium text-white hover:text-indigo-50"
 						>
 							About
+						</a>
+						<a
+							href="/kanban"
+							class="text-base font-medium text-white hover:text-indigo-50"
+						>
+							Kanban
 						</a>
 						<a
 							href="/day-one"
