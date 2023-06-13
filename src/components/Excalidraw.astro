@@ -1,5 +1,6 @@
 ---
-import Button from "./Button.astro";
+import WindowBar from "./WindowBar";
+const weburl = "https://excalidraw.com/";
 ---
 
 <section
@@ -7,9 +8,10 @@ import Button from "./Button.astro";
 >
     <div class="flex w-full" style={{ height: "100vh" }}>
         <div class="w-full relative">
+            <WindowBar webURL={weburl} title="Excalidraw" client:load />
             <iframe
                 style="absolute top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"
-                src="https://excalidraw.com/"></iframe>
+                src={weburl}></iframe>
         </div>
         <div class="w-7/12">Hello</div>
     </div>

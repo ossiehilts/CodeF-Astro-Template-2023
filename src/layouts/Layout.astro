@@ -17,27 +17,21 @@ const { title } = Astro.props as Props;
 		<title>CodeF 2023 - {title}</title>
 	</head>
 	<body>
-		<header class="bg-indigo-900 mb-3">
-			<div
-				class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-12"
-			>
-				<div class="max-w-sm mx-auto text-center text-white">
-					<img src="/logo.png" />
-				</div>
-				<nav
-					class="fixed bottom-5 right-0 mx-auto max-w-7xl px-6 lg:px-8"
-					aria-label="Top"
-				>
-					<CircleText>
-						<div
-							class="bg-pink-400 inline-block rounded-full p-5 shadow-xl hover:p-15"
-						>
-							<img src="/suitcase.svg" class="w-10" />
-						</div>
-					</CircleText>
-				</nav>
-			</div>
-		</header>
+<header class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-3" style={{ height: '80vh' }}>
+  <div class="p-12 flex flex-col justify-center items-center h-full">
+    <div class="max-w-sm mx-auto text-center text-white">
+      <img src="/logo.png" alt="Logo" class="block"/>
+    </div>
+    <nav class="fixed bottom-5 right-0 mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
+      <CircleText>
+        <div class="bg-pink-400 inline-block rounded-full p-5 shadow-xl hover:p-15">
+          <img src="/suitcase.svg" class="w-10" alt="Suitcase" />
+        </div>
+      </CircleText>
+    </nav>
+  </div>
+</header>
+
 		<slot />
 	</body>
 </html>

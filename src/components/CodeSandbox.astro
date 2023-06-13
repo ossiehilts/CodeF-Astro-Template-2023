@@ -1,21 +1,13 @@
 ---
+import WindowBar from "./WindowBar";
 const { sandbox, basic = false } = Astro.props;
 ---
 
 <section
-    class="p-6 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-white rounded-xl shadow-md my-5"
+    class="p-6 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-white"
 >
     <div class="bg-white rounded-t-lg rounded-b-xl shadow-lg overflow-hidden">
-        <div
-            class="flex items-center justify-between bg-gray-200 text-gray-500 px-2 py-1"
-        >
-            <div class="font-mono text-sm">CodeSandbox.io</div>
-            <div class="flex space-x-1.5">
-                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-        </div>
+        <WindowBar title={`CodeSandbox.io/${sandbox}`} />
         <iframe
             src={`https://codesandbox.io/embed/${sandbox}?view=${
                 !basic ? "split" : "preview"
