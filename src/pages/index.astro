@@ -1,6 +1,7 @@
 ---
 import CountdownTimer, { TypingComponent } from "../components/CountdownTimer";
 import WireframedWebsites from "../components/Background";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <style>
@@ -47,13 +48,13 @@ import WireframedWebsites from "../components/Background";
 		}
 	}
 </style>
-<div>
+<Layout>
 	<a href="https://www.rvu.co.uk/">
 		<img
 			style={{
 				position: "fixed",
 				right: 0,
-				top: "50px",
+				bottom: "50px",
 				height: "100px",
 			}}
 			src="/rvu.png"
@@ -126,4 +127,4 @@ import WireframedWebsites from "../components/Background";
 	>
 		<WireframedWebsites client:only />
 	</div>
-</div>
+</Layout>
