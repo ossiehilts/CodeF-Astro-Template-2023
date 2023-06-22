@@ -101,10 +101,11 @@ const CountdownTimer = () => {
             </h1>
           </div>
           <p className="text-white mt-10 max-w-lg">
-            Code F: Immersive web dev program fostering collaboration. Engaging
-            lectures, interactive workshops, hands-on coding. Comprehensive
-            curriculum. Learn HTML, CSS, JavaScript. Build projects. Fun
-            learning environment.{" "}
+            Code F is an immersive web development program that promotes
+            collaboration. It offers engaging lectures, interactive workshops,
+            and hands-on coding experiences. The curriculum is comprehensive and
+            covers HTML, CSS, and JavaScript. Participants will build projects,
+            creating a fun and supportive learning environment.{" "}
             <a
               className="mt-10 block"
               href={"https://www.instagram.com/rvu.codef/"}
