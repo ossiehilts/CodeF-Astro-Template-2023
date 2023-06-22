@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CountdownTimer, { TypingComponent } from "../components/CountdownTimer";
 import WindowBar from "./WindowBar";
+import WireframedWebsites from "../components/Background";
 ---
 
 <style>
@@ -48,7 +49,7 @@ import WindowBar from "./WindowBar";
 		}
 	}
 </style>
-<div class="bg-black">
+<div class="bg-blac">
 	<div class="m-auto md:w-2/3">
 		<div class="md:flex md:flex-row justify-center md:p-10">
 			<div class="md:flex overflow-auto p-10">
@@ -104,5 +105,8 @@ import WindowBar from "./WindowBar";
 				</a>
 			</div>
 		</div>
+	</div>
+	<div style={{ zIndex: -1, position: "fixed" }}>
+		<WireframedWebsites client:load />
 	</div>
 </div>
