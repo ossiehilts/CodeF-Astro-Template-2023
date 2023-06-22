@@ -18,16 +18,11 @@ const { title } = Astro.props as Props;
 	</head>
 	<body>
 		<header
-			class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-3 py-60"
+			class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-3 p-5"
 		>
-			<div class="p-12 flex flex-col justify-center items-center h-full">
-				<div class="max-w-sm mx-auto text-center text-white">
-					<img src="/logo.png" alt="Logo" class="block" />
-				</div>
-				<nav
-					class="fixed bottom-5 right-0 mx-auto max-w-7xl px-6 lg:px-8"
-					aria-label="Top"
-				>
+			<div class="flex flex-col justify-center items-center">
+				<nav class="block text-white font-mono font-extralight text-sm">
+					<a href="/about">./About</a>
 				</nav>
 			</div>
 		</header>
