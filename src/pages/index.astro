@@ -1,15 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import CountdownTimer from "../components/CountdownTimer";
+import CountdownTimer, { TypingComponent } from "../components/CountdownTimer";
+import WindowBar from "./WindowBar";
 ---
-
-<Layout title="Day 1">
-	<div
-		class="fixed content-center top-0 left-0 right-0 bottom-0 z-50 bg-black"
-	>
-		<CountdownTimer client:load />
-	</div>
-</Layout>
 
 <style>
 	p,
@@ -27,4 +20,89 @@ import CountdownTimer from "../components/CountdownTimer";
 	li {
 		font-size: 1.1em;
 	}
+
+	.my-heading {
+		display: block;
+		width: 100%;
+		text-align: left;
+		font-weight: lighter;
+		color: transparent;
+		background: linear-gradient(to right, #00ff00, #bf00ff);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-family: "Open Sans", sans-serif;
+		font-size: 140px;
+		animation: swirl 1s linear infinite;
+	}
+
+	@keyframes swirl {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
 </style>
+<div class="bg-black">
+	<div class="m-auto md:w-2/3">
+		<div class="md:flex md:flex-row justify-center md:p-10">
+			<div class="md:flex overflow-auto p-10">
+				<div>
+					<div>
+						<img src="/logo.png" alt="Logo" class="block h-16" />
+						<h1 class="my-heading">
+							<div class="block">2023</div>
+						</h1>
+						<CountdownTimer client:load />
+						<p class="text-white mt-10 max-w-md">
+							Code F is an immersive web development program that
+							promotes collaboration. It offers engaging lectures,
+							interactive workshops, and hands-on coding
+							experiences. The curriculum is comprehensive and
+							covers HTML, CSS, and JavaScript. Participants will
+							build projects, creating a fun and supportive
+							learning environment.{" "}
+							<a
+								class="mt-10 block"
+								href={"https://www.instagram.com/rvu.codef/"}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<span class="text-pink-600">Meet our team</span>
+							</a>
+						</p>
+						<div class="mt-10 overflow-scroll max-w-lg">
+							<div
+								class="flex items-center justify-between bg-gray-900 text-gray-700 px-2 py-1 rounded-t-md"
+							>
+								<div class="font-mono text-sm text-gray-100">
+									See you soon
+								</div>
+							</div>
+							<TypingComponent client:load />
+						</div>
+					</div>
+				</div>
+				<a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
+					<div class="md:mr-8 mt-5 mb-20 md:float-right">
+						<span class="md:text-8xl md:rotate-12 block"
+							>&#x1F5FA;</span
+						>
+						<p
+							class="bg-pink-600 p-3 text-sm font-mono md:animate-bounce rounded min-w-max"
+						>
+							The Cooperage
+							<br /> 5 Copper Row
+							<br /> London <br /> SE1 2LH
+						</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
