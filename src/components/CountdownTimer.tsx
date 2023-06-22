@@ -87,44 +87,51 @@ const CountdownTimer = () => {
   });
 
   return (
-    <div className="flex items-center justify-center h-screen w-screen">
-      <div className="w-2/3 m-auto">
-        <div>
-          <img src="/logo.png" alt="Logo" class="block h-16" />
-          <h1 className="text-3xl text-pink-600 text-left w-full">
-            <span>is {timeLeft.days} days, </span>
-            <span>{timeLeft.hours} hours, </span>
-            <span>{timeLeft.minutes} minutes, </span>
-            <span>{timeLeft.seconds} seconds </span>
-            <span>away!</span>
-          </h1>
-        </div>
-        <div className="mt-10 w-1/3 overflow-scroll max-h-40">
-          <div className="flex items-center justify-between bg-gray-900 text-gray-700 px-2 py-1 rounded-t-md">
-            <div className="font-mono text-sm text-gray-100">See you soon</div>
+    <div>
+      <div className="flex items-center justify-center h-screen w-screen overflow-auto p-10">
+        <div className="md:w-2/3 m-auto">
+          <div>
+            <img src="/logo.png" alt="Logo" className="block h-16" />
+            <h1 className="text-3xl text-pink-600 text-left w-full">
+              <span>is {timeLeft.days} days, </span>
+              <span>{timeLeft.hours} hours, </span>
+              <span>{timeLeft.minutes} minutes, </span>
+              <span>{timeLeft.seconds} seconds </span>
+              <span>away!</span>
+            </h1>
           </div>
-          <TypingComponent />
+          <p className="text-white mt-10 max-w-lg">
+            Code F: Immersive web dev program fostering collaboration. Engaging
+            lectures, interactive workshops, hands-on coding. Comprehensive
+            curriculum. Learn HTML, CSS, JavaScript. Build projects. Fun
+            learning environment.{" "}
+            <a
+              className="mt-10 block"
+              href={"https://www.instagram.com/rvu.codef/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-pink-600">Meet our team</span>
+            </a>
+          </p>
+          <div className="mt-10 overflow-scroll">
+            <div className="flex items-center justify-between bg-gray-900 text-gray-700 px-2 py-1 rounded-t-md">
+              <div className="font-mono text-sm text-gray-100">
+                See you soon
+              </div>
+            </div>
+            <TypingComponent />
+          </div>
         </div>
-        <a
-          className="mt-10 block"
-          href={"https://www.instagram.com/rvu.codef/"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            stroke="white"
-            width="30"
-            height="30"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M14.5 5.5h3a1 1 0 011 1v3m0 10h-3a1 1 0 01-1-1v-3m4-7.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm-3 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3 7.5h3a1 1 0 001-1v-3"
-            />
-          </svg>
+        <a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
+          <div className="mr-8">
+            <span className="text-8xl rotate-12 block">🗺️</span>
+            <p className="bg-pink-600 p-3 text-sm font-mono animate-bounce">
+              The Cooperage
+              <br /> 5 Copper Row
+              <br /> London <br /> SE1 2LH
+            </p>
+          </div>
         </a>
       </div>
     </div>
