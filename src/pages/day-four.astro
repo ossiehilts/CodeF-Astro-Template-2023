@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
 import TextAndImage from "../components/TextAndImage.astro";
-import Button from "../components/Button.astro";
+import Button from "../components/Button";
 ---
 
 <Layout title="Day 4">
@@ -20,7 +20,7 @@ import Button from "../components/Button.astro";
                 content="CSS (Cascading Style Sheets): CSS is like the instructions that tell you to put the biggest tower in the middle, the walls on the sides, and how to build a bridge at the front. It might tell you to put some green bricks at the bottom to make it look like the castle is on a grassy hill. CSS is the part that makes your castle pretty and colorful. It decides where each part of your castle goes, what color the bricks are, and how big or small they should be."
                 imageURL="/day4/netlify.webp"
             />
-            <Button />
+            <Button client:load />
         </div>
     </Container>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
