@@ -4,15 +4,12 @@ const weburl = "https://excalidraw.com/";
 ---
 
 <section
-    class="p-6 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-white rounded-md shadow-md mb-20 mt-5"
+    class="p-6 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-white rounded-md shadow-md mb-20 my-5"
 >
-    <div class="flex w-full" style={{ height: "100vh" }}>
-        <div class="w-full relative">
-            <WindowBar webURL={weburl} title="Excalidraw" client:load />
-            <iframe
-                style="absolute top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"
-                src={weburl}></iframe>
-        </div>
-        <div class="w-7/12">Hello</div>
+    <div class="w-full relative h-96 pb-8">
+        <WindowBar webURL={weburl} title="Excalidraw" client:load />
+        <iframe
+            style="absolute top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"
+            src={weburl}></iframe>
     </div>
 </section>

@@ -4,9 +4,11 @@ const { sandbox, basic = false } = Astro.props;
 ---
 
 <section
-    class="p-6 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-white"
+    class="p-6 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-white my-20 rounded-md"
 >
-    <div class="bg-white rounded-t-lg rounded-b-xl shadow-lg overflow-hidden">
+    <div
+        class="bg-white rounded-t-lg rounded-b-xl shadow-lg overflow-hidden mx-auto"
+    >
         <WindowBar title={`CodeSandbox.io/${sandbox}`} />
         <iframe
             src={`https://codesandbox.io/embed/${sandbox}?view=${
