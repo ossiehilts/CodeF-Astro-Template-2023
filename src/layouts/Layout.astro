@@ -18,7 +18,7 @@ const { title } = Astro.props as Props;
 	</head>
 	<body>
 		<header
-			class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-3 p-5"
+			class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-3 p-3"
 		>
 			<div class="flex flex-col justify-center items-center">
 				<nav class="block text-white font-mono font-extralight text-sm">
@@ -29,37 +29,12 @@ const { title } = Astro.props as Props;
 
 		<slot />
 
-		<footer class="bg-gray-800 text-white body-font">
+		<footer class="bg-gray-800 text-gray-500 body-font">
 			<div
-				class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+				class="container px-5 py-2 mx-auto flex items-center sm:flex-row flex-col"
 			>
-				<a
-					class="flex title-font font-medium items-center md:justify-start justify-center text-white"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-						viewBox="0 0 24 24"
-					>
-						<path
-							d="M22 12h-4m-2 0a6 6 0 11-6 6 6 6 0 016-6m6 0h4M4 12H0m2 0a6 6 0 116 6 6 6 0 01-6-6m0 0H0"
-						></path>
-					</svg>
-					<span class="ml-3 text-xl">Codef 2023</span>
-				</a>
-				<p class="text-sm text-gray-300 sm:ml-6 sm:mt-0 mt-4">
-					© 2023 Codef —
-					<a
-						href="https://twitter.com/codef"
-						class="text-gray-400 ml-1"
-						rel="noopener noreferrer"
-						target="_blank">@codef</a
-					>
+				<p class="text-sm text-gray-500 sm:ml-6 sm:mt-0">
+					© 2023 Codef
 				</p>
 			</div>
 		</footer>
