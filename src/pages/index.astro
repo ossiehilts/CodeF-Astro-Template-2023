@@ -49,10 +49,10 @@ import WireframedWebsites from "../components/Background";
 		}
 	}
 </style>
-<div class="bg-blac">
-	<div class="m-auto md:w-2/3">
-		<div class="md:flex md:flex-row justify-center md:p-10">
-			<div class="md:flex overflow-auto p-10">
+<div>
+	<div class="m-auto w-full lg:w-2/3">
+		<div class="lg:flex lg:flex-row justify-center lg:p-10">
+			<div class="lg:flex p-10">
 				<div>
 					<div>
 						<img src="/logo.png" alt="Logo" class="block h-16" />
@@ -60,7 +60,7 @@ import WireframedWebsites from "../components/Background";
 							<div class="block">2023</div>
 						</h1>
 						<CountdownTimer client:load />
-						<p class="text-white mt-10 max-w-md">
+						<p class="text-white mt-10 lg:max-w-md">
 							Code F is an immersive web development program that
 							promotes collaboration. It offers engaging lectures,
 							interactive workshops, and hands-on coding
@@ -90,12 +90,10 @@ import WireframedWebsites from "../components/Background";
 					</div>
 				</div>
 				<a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
-					<div class="md:mr-8 mt-5 mb-20 md:float-right">
-						<span class="md:text-8xl md:rotate-12 block"
-							>&#x1F5FA;</span
-						>
+					<div class="lg:mr-8 mt-5 mb-20 lg:float-right">
+						<span class="lg:text-8xl lg:rotate-12">&#x1F5FA;</span>
 						<p
-							class="bg-pink-600 p-3 text-sm font-mono md:animate-bounce rounded min-w-max"
+							class="bg-pink-600 p-3 text-sm font-mono lg:animate-bounce rounded min-w-max inline-block md:block"
 						>
 							The Cooperage
 							<br /> 5 Copper Row
@@ -106,7 +104,16 @@ import WireframedWebsites from "../components/Background";
 			</div>
 		</div>
 	</div>
-	<div style={{ zIndex: -1, position: "fixed" }}>
+	<div
+		style={{
+			zIndex: -1,
+			position: "fixed",
+			top: 0,
+			left: 0,
+			bottom: 0,
+			right: 0,
+		}}
+	>
 		<WireframedWebsites client:load />
 	</div>
 </div>
