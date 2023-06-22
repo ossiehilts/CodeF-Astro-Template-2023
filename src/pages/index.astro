@@ -43,14 +43,10 @@ import PDF from "../components/PDF.astro";
 		</div>
 
 		<div class="max-w-3xl mx-auto p-8 text-gray-700">
-			<h2 class="text-2xl font-bold mb-4"></h2>
-
-			<p class="mb-4"></p>
-
 			<TextAndImage
 				title="Secondly, signing up for CodeSandbox with your GitHub Account"
 				content="CodeSandbox is an online code editor where you can create and share projects directly from your browser. It's especially great for web development, and supports a variety of different languages and frameworks. Here's a step-by-step guide on how to sign up for CodeSandbox using your new GitHub account:"
-				imageURL="/day1/github-pages.jpg"
+				imageURL="/day1/og.jpg"
 			/>
 
 			<List
@@ -94,10 +90,19 @@ import PDF from "../components/PDF.astro";
 		<div class="max-w-3xl mx-auto p-8 text-gray-700">
 			<TextAndImage
 				title="And lastly, cloning the CodeF starter template "
-				content="XXXXX"
-				imageURL="/day1/github-pages.jpg"
+				content="We're excited to introduce our development template that combines Astro and Tailwind CSS. Astro's innovative approach minimizes JavaScript, delivering swift, efficient websites. Tailwind CSS complements this by providing a utility-first framework for creating visually compelling, custom UIs with ease. This fusion simplifies your workflow, resulting in an enhanced performance and user experience. It's the perfect starting point for your web projects, let's push the boundaries of web development together!"
+				imageURL="/day1/astro.webp"
 			/>
-			<Button client:load />
+			<List
+				items={[
+					"Navigate to the CodeSandbox window below these steps.",
+					"Click the green expand button to enter the development area.",
+					"Click on the 'Fork' button located in the upper right corner of the sandbox environment.",
+					"CodeSandbox will then create a new copy (fork) of the sandbox in your account.",
+					"Rename the new sandbox if you want, by clicking on the title.",
+					"Start making your changes in the newly forked sandbox.",
+				]}
+			/>
 		</div>
 		<CodeSandbox basic sandbox="hopeful-sea-249w2x" />
 		<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
