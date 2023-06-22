@@ -88,7 +88,7 @@ const CountdownTimer = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-center h-screen w-screen overflow-auto p-10">
+      <div className="md:flex items-center justify-center h-screen w-screen overflow-auto p-10">
         <div className="md:w-2/3 m-auto">
           <div>
             <img src="/logo.png" alt="Logo" className="block h-16" />
@@ -124,9 +124,9 @@ const CountdownTimer = () => {
           </div>
         </div>
         <a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
-          <div className="mr-8">
-            <span className="text-8xl rotate-12 block">🗺️</span>
-            <p className="bg-pink-600 p-3 text-sm font-mono animate-bounce">
+          <div className="md:mr-8 mt-5">
+            <span className="md:text-8xl md:rotate-12 block">🗺️</span>
+            <p className="bg-pink-600 p-3 text-sm font-mono md:animate-bounce rounded">
               The Cooperage
               <br /> 5 Copper Row
               <br /> London <br /> SE1 2LH
