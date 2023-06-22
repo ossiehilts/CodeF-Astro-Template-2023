@@ -93,7 +93,12 @@ const ThreeJSAnimation = () => {
 
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-pink-900 via-gray-900 to-gray-900">
-      <div className="hidden lg:block" ref={canvasRef} id="canvas-container" />
+      <div
+        style={{ opacity: 0.4 }}
+        className="hidden lg:block"
+        ref={canvasRef}
+        id="canvas-container"
+      />
     </div>
   );
 };
