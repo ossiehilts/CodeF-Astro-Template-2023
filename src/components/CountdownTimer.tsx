@@ -125,7 +125,7 @@ const CountdownTimer = () => {
           </div>
         </div>
         <a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
-          <div className="md:mr-8 mt-5">
+          <div className="md:mr-8 mt-5 mb-20">
             <span className="md:text-8xl md:rotate-12 block">🗺️</span>
             <p className="bg-pink-600 p-3 text-sm font-mono md:animate-bounce rounded">
               The Cooperage
