@@ -44,8 +44,10 @@ const TypingComponent = () => {
 
   return (
     <div>
-      <p className="p-2 text-gray-800 bg-gray-700 font-mono text-xs">Output</p>
-      <p className="p-2 bg-gray-700 font-mono text-sm">
+      <p className="p-2 text-gray-800 bg-gray-700 font-mono text-xs max-w-lg">
+        Output
+      </p>
+      <p className="p-2 bg-gray-700 font-mono text-sm rounded-b-md max-w-lg">
         {">"} {message}
       </p>
     </div>
@@ -91,16 +93,32 @@ const CountdownTimer = () => {
       <div className="md:flex items-center justify-center h-screen w-screen overflow-auto p-10">
         <div className="md:w-2/3 m-auto">
           <div>
+            <div className="top-0 left-0 right-0 bg-red-500 absolute h-100 block"></div>
             <img src="/logo.png" alt="Logo" className="block h-16" />
-            <h1 className="text-3xl text-pink-600 text-left w-full">
+            <h1
+              className="block float-left w-full text-left font-light text-transparent bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text m-0 p-0"
+              style={{
+                WebkitTextFillColor: "transparent",
+                fontFamily: "Open Sans, sans-serif",
+                fontSize: "140px",
+                animation: "swirl 1s linear infinite",
+                WebkitBackgroundClip: "text",
+              }}
+            >
+              <div className="block">2023</div>
+            </h1>
+            <h2
+              style={{ marginTop: "128px" }}
+              className="text-3xl text-pink-600 text-left w-full block md:mt-10"
+            >
               <span>is {timeLeft.days} days, </span>
               <span>{timeLeft.hours} hours, </span>
               <span>{timeLeft.minutes} minutes, </span>
               <span>{timeLeft.seconds} seconds </span>
               <span>away!</span>
-            </h1>
+            </h2>
           </div>
-          <p className="text-white mt-10 max-w-lg">
+          <p className="text-white mt-20 max-w-md">
             Code F is an immersive web development program that promotes
             collaboration. It offers engaging lectures, interactive workshops,
             and hands-on coding experiences. The curriculum is comprehensive and
@@ -115,7 +133,7 @@ const CountdownTimer = () => {
               <span className="text-pink-600">Meet our team</span>
             </a>
           </p>
-          <div className="mt-10 overflow-scroll">
+          <div className="mt-10 overflow-scroll max-w-lg">
             <div className="flex items-center justify-between bg-gray-900 text-gray-700 px-2 py-1 rounded-t-md">
               <div className="font-mono text-sm text-gray-100">
                 See you soon
