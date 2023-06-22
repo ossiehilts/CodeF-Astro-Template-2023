@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import WindowBar from "./WindowBar";
 
-const TypingComponent = () => {
+export const TypingComponent = () => {
   const [message, setMessage] = useState("");
   const messages = [
     "Welcome to Code F Curriculum 2023, an exciting and comprehensive program designed to immerse you in the world of web development while fostering a fun and collaborative learning environment. Over the course of four action-packed days, you'll embark on a journey filled with engaging lectures, interactive workshops, and hands-on coding experiences.",
@@ -89,71 +88,13 @@ const CountdownTimer = () => {
   });
 
   return (
-    <div>
-      <div className="md:flex items-center justify-center h-screen w-screen overflow-auto p-10">
-        <div className="md:w-2/3 m-auto">
-          <div>
-            <div className="top-0 left-0 right-0 bg-red-500 absolute h-100 block"></div>
-            <img src="/logo.png" alt="Logo" className="block h-16" />
-            <h1
-              className="block float-left w-full text-left font-light text-transparent bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text m-0 p-0"
-              style={{
-                WebkitTextFillColor: "transparent",
-                fontFamily: "Open Sans, sans-serif",
-                fontSize: "140px",
-                animation: "swirl 1s linear infinite",
-                WebkitBackgroundClip: "text",
-              }}
-            >
-              <div className="block">2023</div>
-            </h1>
-            <h2
-              style={{ marginTop: "128px" }}
-              className="text-3xl text-pink-600 text-left w-full block md:mt-10"
-            >
-              <span>is {timeLeft.days} days, </span>
-              <span>{timeLeft.hours} hours, </span>
-              <span>{timeLeft.minutes} minutes, </span>
-              <span>{timeLeft.seconds} seconds </span>
-              <span>away!</span>
-            </h2>
-          </div>
-          <p className="text-white mt-20 max-w-md">
-            Code F is an immersive web development program that promotes
-            collaboration. It offers engaging lectures, interactive workshops,
-            and hands-on coding experiences. The curriculum is comprehensive and
-            covers HTML, CSS, and JavaScript. Participants will build projects,
-            creating a fun and supportive learning environment.{" "}
-            <a
-              className="mt-10 block"
-              href={"https://www.instagram.com/rvu.codef/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="text-pink-600">Meet our team</span>
-            </a>
-          </p>
-          <div className="mt-10 overflow-scroll max-w-lg">
-            <div className="flex items-center justify-between bg-gray-900 text-gray-700 px-2 py-1 rounded-t-md">
-              <div className="font-mono text-sm text-gray-100">
-                See you soon
-              </div>
-            </div>
-            <TypingComponent />
-          </div>
-        </div>
-        <a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
-          <div className="md:mr-8 mt-5 mb-20">
-            <span className="md:text-8xl md:rotate-12 block">🗺️</span>
-            <p className="bg-pink-600 p-3 text-sm font-mono md:animate-bounce rounded">
-              The Cooperage
-              <br /> 5 Copper Row
-              <br /> London <br /> SE1 2LH
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
+    <h2 className="text-3xl text-pink-600 text-left w-full block m-0 p-0 md:mt-2">
+      <span>is {timeLeft.days} days, </span>
+      <span>{timeLeft.hours} hours, </span>
+      <span>{timeLeft.minutes} minutes, </span>
+      <span>{timeLeft.seconds} seconds </span>
+      <span>away!</span>
+    </h2>
   );
 };
 
