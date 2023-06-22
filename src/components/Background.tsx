@@ -77,7 +77,7 @@ const ThreeJSAnimation = () => {
     };
   }, []);
 
-  return <div style={{ opacity: 0.9 }} className="fixed top-0 bottom-0 left-0 right-0" ref={canvasRef} id="canvas-container" />;
+  return <div class="bg-black"><div style={{ opacity: 0.5 }} className="lg:fixed top-0 bottom-0 left-0 right-0" ref={canvasRef} id="canvas-container" /></div>;
 };
 
 export default ThreeJSAnimation;

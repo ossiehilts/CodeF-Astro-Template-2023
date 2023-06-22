@@ -43,10 +43,10 @@ export const TypingComponent = () => {
 
   return (
     <div>
-      <p className="p-2 text-gray-800 bg-gray-700 font-mono text-xs max-w-lg">
+      <p className="p-2 text-gray-800 bg-gray-300 font-mono text-xs max-w-lg">
         Output
       </p>
-      <p className="p-2 bg-gray-700 font-mono text-sm rounded-b-md max-w-lg">
+      <p className="p-2 bg-gray-300 font-mono text-sm rounded-b-md max-w-lg">
         {">"} {message}
       </p>
     </div>
@@ -88,7 +88,7 @@ const CountdownTimer = () => {
   });
 
   return (
-    <h2 className="text-3xl text-pink-600 text-left w-full block m-0 p-0 md:mt-2">
+    <h2 className="text-3xl text-pink-300 text-left w-full block m-0 p-0 md:mt-2">
       <span>is {timeLeft.days} days, </span>
       <span>{timeLeft.hours} hours, </span>
       <span>{timeLeft.minutes} minutes, </span>
