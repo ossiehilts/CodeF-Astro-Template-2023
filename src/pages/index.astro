@@ -10,9 +10,15 @@ import Celebration from "../components/Celebration";
 import Excalidraw from "../components/Excalidraw.astro";
 import WavingHand from "../components/WavingHand.astro";
 import PDF from "../components/PDF.astro";
+import CountdownTimer from "../components/CountdownTimer";
 ---
 
 <Layout title="Day 1">
+	<div
+		class="fixed content-center top-0 left-0 right-0 bottom-0 z-50 bg-black"
+	>
+		<CountdownTimer client:load />
+	</div>
 	<Container>
 		<div class="max-w-3xl mx-auto p-8 text-gray-700">
 			<h2 class="text-6xl my-20 leading-normal">
