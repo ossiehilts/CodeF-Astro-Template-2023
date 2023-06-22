@@ -6,6 +6,7 @@ import CodeSandbox from "../components/CodeSandbox.astro";
 import Button from "../components/Button";
 import TextAndImage from "../components/TextAndImage.astro";
 import List from "../components/List";
+import Celebration from "../components/Celebration";
 import Excalidraw from "../components/Excalidraw.astro";
 import WavingHand from "../components/WavingHand.astro";
 import PDF from "../components/PDF.astro";
@@ -43,26 +44,6 @@ import PDF from "../components/PDF.astro";
 		</div>
 
 		<div class="max-w-3xl mx-auto p-8 text-gray-700">
-			<TextAndImage
-				title="Secondly, signing up for CodeSandbox with your GitHub Account"
-				content="CodeSandbox is an online code editor where you can create and share projects directly from your browser. It's especially great for web development, and supports a variety of different languages and frameworks. Here's a step-by-step guide on how to sign up for CodeSandbox using your new GitHub account:"
-				imageURL="/day1/og.jpg"
-			/>
-
-			<List
-				items={[
-					"Visit the CodeSandbox website: Open your browser and start the sign-up process.",
-					"Click on the 'Sign In' button located at the top-right corner of the page.",
-					"Choose GitHub as your sign-in method: You'll see different options for signing in. Click on the 'Continue with GitHub' button.",
-					"Authorize CodeSandbox: If you're already logged into GitHub, you'll be asked to authorize CodeSandbox to access your GitHub account. Click 'Authorize CodeSandbox' to proceed. If you're not logged in, you'll be prompted to log into GitHub first.",
-				]}
-			/>
-
-			<Button client:load />
-			<!-- You can continue the list here -->
-		</div>
-
-		<div class="max-w-3xl mx-auto p-8 text-gray-700">
 			<h3 class="text-xl font-semibold mb-2">
 				Here's a YouTube video to help you if you are a visual learner!
 			</h3>
@@ -84,8 +65,42 @@ import PDF from "../components/PDF.astro";
 		</div>
 
 		<div class="max-w-3xl mx-auto p-8 text-gray-700">
-			<p>Complete the workshop sheet</p>
+			<TextAndImage
+				title="Secondly, signing up for CodeSandbox with your GitHub Account"
+				content="CodeSandbox is an online code editor where you can create and share projects directly from your browser. It's especially great for web development, and supports a variety of different languages and frameworks. Here's a step-by-step guide on how to sign up for CodeSandbox using your new GitHub account:"
+				imageURL="/day1/og.jpg"
+			/>
+
+			<List
+				items={[
+					"Visit the CodeSandbox website: Open your browser and start the sign-up process.",
+					"Click on the 'Sign In' button located at the top-right corner of the page.",
+					"Choose GitHub as your sign-in method: You'll see different options for signing in. Click on the 'Continue with GitHub' button.",
+					"Authorize CodeSandbox: If you're already logged into GitHub, you'll be asked to authorize CodeSandbox to access your GitHub account. Click 'Authorize CodeSandbox' to proceed. If you're not logged in, you'll be prompted to log into GitHub first.",
+				]}
+			/>
+
+			<Button client:load />
+			<!-- You can continue the list here -->
 		</div>
+
+		<div class="max-w-3xl mx-auto p-8 text-gray-700">
+			<TextAndImage
+				title="Complete the Day 1 Workshop sheet"
+				content="This concise worksheet provides a systematic approach to website development. It starts by identifying the project's purpose and setting precise goals. Next, it helps outline your target audience, defining who would benefit from your website. The focus then shifts to the website's design, integrating wireframes and your unique branding elements. Finally, it offers a practical guide for managing weekly tasks, ensuring efficient progress towards your website development goals."
+				imageURL="/day1/design.webp"
+			/>
+			<List
+				items={[
+					"Grab the printout worksheet and begin filling in the right-hand side with all your creative ideas.",
+					"Once you're finished, make sure to keep the worksheet in a safe place.",
+					"Remember, you'll need to refer back to these ideas tomorrow, so ensure it's easily accessible!",
+				]}
+			/>
+		</div>
+		<h3 class="text-xl font-semibold mb-2 mt-20">
+			Use Excalidraw below when prompted by the lecturer.
+		</h3>
 		<Excalidraw />
 		<div class="max-w-3xl mx-auto p-8 text-gray-700">
 			<TextAndImage
@@ -105,7 +120,7 @@ import PDF from "../components/PDF.astro";
 			/>
 		</div>
 		<CodeSandbox basic sandbox="hopeful-sea-249w2x" />
-		<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
+		<Celebration client:only />
 	</Container>
 </Layout>
 
