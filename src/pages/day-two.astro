@@ -16,329 +16,355 @@ import CodeSandbox from "../components/CodeSandbox.astro";
                 Web Development Tools & Interactive Learning
             </Fragment>
         </Sectionhead>
+        <div class="max-w-3xl mx-auto p-6 text-gray-700 mt-20">
+            <TextAndIMage
+                title="foo"
+                content="
+In this journey, we'll be using CodeSandbox as our playground to explore HTML, CSS, and JavaScript, similar to how one experiments with Lego bricks. By mixing, matching, and reassembling these 'code bricks', we'll create interactive web projects. This playful approach allows us to understand the basics of web development while having fun, instilling a sense of creativity and exploration, just like building with Legos."
+                <
+                div
+            >
+                <div class="max-w-3xl mx-auto p-6 text-gray-700 mt-20">
+                    <TextAndImage
+                        title="Building your website like a Lego castle"
+                        content="HTML (HyperText Markup Language): Imagine you're building a LEGO castle. The HTML is like the grey LEGO bricks that you use to construct the castle's walls, the towers, and the main gate. It gives the basic shape and structure to your castle."
+                        imageURL="/day2/grey-bricks.png"
+                    />
+                </div>
+                <div class="max-w-3xl mx-auto p-6 text-gray-700">
+                    <Accordion
+                        title="HTML elements used in the above page explained"
+                        client:load
+                    >
+                        <div class="grid grid-cols-2 gap-4 my-20">
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;!DOCTYPE html&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This declaration is not an HTML tag, but it
+                                helps the browser understand that the document
+                                is an HTML5 document.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;html&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is the root of an HTML document.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;head&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This element contains meta-information about the
+                                HTML document that is not displayed on the page
+                                itself.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;meta&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines metadata about an HTML
+                                document. It sets the character encoding and
+                                sets the viewport for responsive design.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;title&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag specifies the title of the HTML
+                                document. The title is displayed in the
+                                browser's title bar or tab.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;body&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines the document's body, which
+                                contains all the contents of an HTML document,
+                                such as text, hyperlinks, images, tables, lists,
+                                etc.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;header&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This element represents a container for
+                                introductory content or a set of navigational
+                                links.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;h1&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines a first-level heading. HTML
+                                defines six levels of headings, with &lt;h1&gt;
+                                being the highest (and generally, largest and
+                                most important) level.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;nav&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines a section of the page with
+                                navigation links.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;ul&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines an unordered (bulleted) list.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;li&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines a listSure, here is the rest of
+                                the HTML table content: ```html
+                                <div class="font-light mb-4">
+                                    This tag defines a list item. In this case,
+                                    it's used within a &lt;ul&gt; tag to create
+                                    each item in the navigation menu.
+                                </div>
+                            </div>
+
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;a&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines a hyperlink, which is used to
+                                link from one page to another. The most
+                                important attribute of the &lt;a&gt; element is
+                                the href attribute, which indicates the link's
+                                destination.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;main&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag specifies the main content of a
+                                document. The content inside the &lt;main&gt;
+                                tag should be unique to the document.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;section&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines a section in a document. It is
+                                a thematic grouping of content, typically with a
+                                heading.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;h2&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines a second-level heading. It's
+                                generally used for subheadings.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;p&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines a paragraph.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;footer&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This tag defines a footer for a document or a
+                                section. It typically contains authorship
+                                information, copyright information, contact
+                                information, etc.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&amp;copy;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is not a tag, but an HTML entity used to
+                                display the copyright symbol.
+                            </div>
+                        </div>
+                    </Accordion>
+                </div>
+                <CodeSandbox sandbox="elated-williamson-ynfx5k" />
+                <div class="max-w-3xl mx-auto p-6 text-gray-700">
+                    <Quiz client:load />
+                </div>
+                <div class="max-w-3xl mx-auto p-6 text-gray-700">
+                    <hr />
+                    <TextAndImage
+                        title="CSS"
+                        content="CSS (Cascading Style Sheets): CSS is like the instructions that tell you to put the biggest tower in the middle, the walls on the sides, and how to build a bridge at the front. It might tell you to put some green bricks at the bottom to make it look like the castle is on a grassy hill. CSS is the part that makes your castle pretty and colorful. It decides where each part of your castle goes, what color the bricks are, and how big or small they should be."
+                        imageURL="/day2/crane-bricks.png"
+                    />
+                </div>
+                <div class="max-w-3xl mx-auto p-6 text-gray-700">
+                    <Accordion title="CSS tags explaind" client:load>
+                        <div class="grid grid-cols-2 gap-4 my-20">
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >.class</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is a class selector in CSS. It selects
+                                elements with a specific class attribute. You
+                                can select multiple elements with the same class
+                                name.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >#id</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is an ID selector in CSS. It selects an
+                                element with a specific id attribute. Each id
+                                should be unique within a page.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >element</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is an element selector in CSS. It selects
+                                all elements of a specific type.
+                            </div>
+                            <div>
+                                <code
+                                    class="bg-gray-200 px-1 font-mono rounded"
+                                >
+                                    {"{ property: value; }"}</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is a CSS declaration. It consists of a
+                                property and a value, separated by a colon and
+                                enclosed in curly braces. The property is a type
+                                of attribute of an HTML element, and the value
+                                is the style applied to that attribute.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >@media</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is a media query in CSS. It applies
+                                different styles for different media
+                                types/devices. For example, you can have
+                                different styles for different screen sizes.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >/* comment */</code
+                                >
+                            </div>
+                            <div class="font-light">
+                                This is a CSS comment. It is used to add notes
+                                in the CSS code or to prevent the browser from
+                                interpreting specific parts of the style.
+                            </div>
+                        </div>
+                    </Accordion>
+                </div>
+                <CodeSandbox sandbox="day-1-css-forked-vh2hhs" />
+                <div class="max-w-3xl mx-auto p-6 text-gray-700">
+                    <Quiz client:load />
+                </div>
+                <div class="max-w-3xl mx-auto p-6 text-gray-700">
+                    <hr />
+                    <TextAndImage
+                        title="JavaScript"
+                        content="Now, imagine you've got some magic LEGO bricks. These magic bricks can open the castle gate when you shout 'Open Sesame!', or make the castle guards march up and down the walls. JavaScript is like these magic bricks. It makes your castle do things. With JavaScript, you can make parts of your webpage move, respond to clicks or typing, or change in any way you can imagine."
+                        imageURL="/day2/magic-brick.png"
+                    />
+                </div>
+                <div class="max-w-3xl mx-auto p-6 text-gray-700">
+                    <Accordion title="foo" client:load>
+                        <div class="grid grid-cols-2 gap-4 my-20">
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >&lt;script&gt;</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                The &lt;script&gt; tag is used in HTML to embed
+                                or reference JavaScript code.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >function changeTitle()</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is a JavaScript function declaration.
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >document.getElementById("header-title")</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is a JavaScript method that gets the first
+                                element in the document with the id
+                                "header-title".
+                            </div>
+                            <div>
+                                <code class="bg-gray-200 px-1 font-mono rounded"
+                                    >.innerText = "Welcome to Your Awesome New
+                                    Website!"</code
+                                >
+                            </div>
+                            <div class="font-light mb-4">
+                                This is a JavaScript property that sets the text
+                                content of the specified node, and all its
+                                descendants.
+                            </div>
+                        </div>
+                    </Accordion>
+                </div>
+                <CodeSandbox sandbox="day-1-javascript-forked-dnwn7r" />
+                <div class="max-w-3xl mx-auto p-6 text-gray-700">
+                    <Quiz client:load />
+                </div>
+            </TextAndIMage>
+        </div>
     </Container>
-    <div class="max-w-3xl mx-auto p-6 text-gray-700">
-        <h2 class="text-3xl font-bold mb-5">
-            Building your website like a Lego castle
-        </h2>
-        <TextAndImage
-            title="HTML"
-            content="HTML (HyperText Markup Language): Imagine you're building a LEGO castle. The HTML is like the grey LEGO bricks that you use to construct the castle's walls, the towers, and the main gate. It gives the basic shape and structure to your castle."
-            imageURL="/day2/grey-bricks.png"
-        />
-    </div>
-    <div class="max-w-3xl mx-auto p-6 text-gray-700">
-        <Accordion
-            title="HTML elements used in the above page explained"
-            client:load
-        >
-            <div class="grid grid-cols-2 gap-4 my-20">
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;!DOCTYPE html&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This declaration is not an HTML tag, but it helps the
-                    browser understand that the document is an HTML5 document.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;html&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This is the root of an HTML document.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;head&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This element contains meta-information about the HTML
-                    document that is not displayed on the page itself.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;meta&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines metadata about an HTML document. It sets
-                    the character encoding and sets the viewport for responsive
-                    design.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;title&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag specifies the title of the HTML document. The title
-                    is displayed in the browser's title bar or tab.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;body&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines the document's body, which contains all the
-                    contents of an HTML document, such as text, hyperlinks,
-                    images, tables, lists, etc.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;header&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This element represents a container for introductory content
-                    or a set of navigational links.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;h1&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines a first-level heading. HTML defines six
-                    levels of headings, with &lt;h1&gt; being the highest (and
-                    generally, largest and most important) level.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;nav&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines a section of the page with navigation
-                    links.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;ul&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines an unordered (bulleted) list.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;li&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines a listSure, here is the rest of the HTML
-                    table content: ```html
-                    <div class="font-light mb-4">
-                        This tag defines a list item. In this case, it's used
-                        within a &lt;ul&gt; tag to create each item in the
-                        navigation menu.
-                    </div>
-                </div>
-
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;a&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines a hyperlink, which is used to link from one
-                    page to another. The most important attribute of the
-                    &lt;a&gt; element is the href attribute, which indicates the
-                    link's destination.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;main&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag specifies the main content of a document. The
-                    content inside the &lt;main&gt; tag should be unique to the
-                    document.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;section&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines a section in a document. It is a thematic
-                    grouping of content, typically with a heading.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;h2&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines a second-level heading. It's generally used
-                    for subheadings.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;p&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">This tag defines a paragraph.</div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;footer&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This tag defines a footer for a document or a section. It
-                    typically contains authorship information, copyright
-                    information, contact information, etc.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&amp;copy;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This is not a tag, but an HTML entity used to display the
-                    copyright symbol.
-                </div>
-            </div>
-        </Accordion>
-    </div>
-    <CodeSandbox sandbox="elated-williamson-ynfx5k" />
-    <div class="max-w-3xl mx-auto p-6 text-gray-700">
-        <Quiz client:load />
-    </div>
-    <div class="max-w-3xl mx-auto p-6 text-gray-700">
-        <hr />
-        <TextAndImage
-            title="CSS"
-            content="CSS (Cascading Style Sheets): CSS is like the instructions that tell you to put the biggest tower in the middle, the walls on the sides, and how to build a bridge at the front. It might tell you to put some green bricks at the bottom to make it look like the castle is on a grassy hill. CSS is the part that makes your castle pretty and colorful. It decides where each part of your castle goes, what color the bricks are, and how big or small they should be."
-            imageURL="/day2/crane-bricks.png"
-        />
-    </div>
-    <div class="max-w-3xl mx-auto p-6 text-gray-700">
-        <Accordion title="CSS tags explaind" client:load>
-            <div class="grid grid-cols-2 gap-4 my-20">
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >.class</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This is a class selector in CSS. It selects elements with a
-                    specific class attribute. You can select multiple elements
-                    with the same class name.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded">#id</code>
-                </div>
-                <div class="font-light mb-4">
-                    This is an ID selector in CSS. It selects an element with a
-                    specific id attribute. Each id should be unique within a
-                    page.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >element</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This is an element selector in CSS. It selects all elements
-                    of a specific type.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded">
-                        {"{ property: value; }"}</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This is a CSS declaration. It consists of a property and a
-                    value, separated by a colon and enclosed in curly braces.
-                    The property is a type of attribute of an HTML element, and
-                    the value is the style applied to that attribute.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >@media</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This is a media query in CSS. It applies different styles
-                    for different media types/devices. For example, you can have
-                    different styles for different screen sizes.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >/* comment */</code
-                    >
-                </div>
-                <div class="font-light">
-                    This is a CSS comment. It is used to add notes in the CSS
-                    code or to prevent the browser from interpreting specific
-                    parts of the style.
-                </div>
-            </div>
-        </Accordion>
-    </div>
-    <CodeSandbox sandbox="day-1-css-forked-vh2hhs" />
-    <div class="max-w-3xl mx-auto p-6 text-gray-700">
-        <Quiz client:load />
-    </div>
-    <div class="max-w-3xl mx-auto p-6 text-gray-700">
-        <hr />
-        <TextAndImage
-            title="JavaScript"
-            content="Now, imagine you've got some magic LEGO bricks. These magic bricks can open the castle gate when you shout 'Open Sesame!', or make the castle guards march up and down the walls. JavaScript is like these magic bricks. It makes your castle do things. With JavaScript, you can make parts of your webpage move, respond to clicks or typing, or change in any way you can imagine."
-            imageURL="/day2/magic-brick.png"
-        />
-    </div>
-    <div class="max-w-3xl mx-auto p-6 text-gray-700">
-        <Accordion title="foo" client:load>
-            <div class="grid grid-cols-2 gap-4 my-20">
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >&lt;script&gt;</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    The &lt;script&gt; tag is used in HTML to embed or reference
-                    JavaScript code.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >function changeTitle()</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This is a JavaScript function declaration.
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >document.getElementById("header-title")</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This is a JavaScript method that gets the first element in
-                    the document with the id "header-title".
-                </div>
-                <div>
-                    <code class="bg-gray-200 px-1 font-mono rounded"
-                        >.innerText = "Welcome to Your Awesome New Website!"</code
-                    >
-                </div>
-                <div class="font-light mb-4">
-                    This is a JavaScript property that sets the text content of
-                    the specified node, and all its descendants.
-                </div>
-            </div>
-        </Accordion>
-    </div>
-    <CodeSandbox sandbox="day-1-javascript-forked-dnwn7r" />
-    <div class="max-w-3xl mx-auto p-6 text-gray-700">
-        <Quiz client:load />
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
 </Layout>
