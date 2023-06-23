@@ -18,7 +18,7 @@ const ThreeJSAnimation = () => {
         0.1,
         1000
       );
-      camera.position.z = 5;
+      camera.position.z = 2;
 
       // Create a renderer
       renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -69,7 +69,7 @@ const ThreeJSAnimation = () => {
 
       // Rotate websites
       scene.children.forEach((website, i) => {
-        const rand = ((i + 58 * Math.random()) / 10000) * 2;
+        const rand = ((i + 58 * Math.random()) / 1000) * 0.8;
         website.rotation.x += rand;
         website.rotation.y += rand;
       });

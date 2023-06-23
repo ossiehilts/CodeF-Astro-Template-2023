@@ -50,12 +50,12 @@ export const TypingComponent = () => {
   };
 
   return (
-    <div className="text-black">
-      <p className="p-2 text-gray-800 bg-gray-300 font-mono text-xs w-lg">
-        Output
+    <div className="text-black block">
+      <p className="p-2 text-gray-400 bg-gray-300 font-mono text-xs">
+        ./output.sh
       </p>
       <p
-        className="p-2 bg-gray-300 font-mono text-sm rounded-b-md max-w-lg leading-6"
+        className="p-2 bg-gray-300 font-mono text-sm rounded-b-mdleading-6"
         dangerouslySetInnerHTML={{
           __html:
             message +
@@ -101,7 +101,7 @@ const CountdownTimer = () => {
   });
 
   return (
-    <h2 className="text-3xl text-left w-full block m-0 p-0 md:mt-2">
+    <h2 className="text-4xl text-left w-full block m-0 p-0 md:mt-2 leading-10 sm:mt-40 max-w-md">
       <span>is {timeLeft.days} days, </span>
       <span>{timeLeft.hours} hours, </span>
       <span>{timeLeft.minutes} minutes, </span>

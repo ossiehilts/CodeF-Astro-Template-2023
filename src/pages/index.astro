@@ -23,7 +23,7 @@ import Layout from "../layouts/Layout.astro";
 
 	.my-heading {
 		display: block;
-		width: 100%;
+		width: 300px;
 		text-align: left;
 		font-weight: lighter;
 		color: transparent;
@@ -32,7 +32,7 @@ import Layout from "../layouts/Layout.astro";
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		font-family: "Open Sans", sans-serif;
-		font-size: 140px;
+		font-size: 120px;
 		animation: swirl 1s linear infinite;
 	}
 
@@ -55,7 +55,7 @@ import Layout from "../layouts/Layout.astro";
 				position: "fixed",
 				right: 0,
 				bottom: "50px",
-				height: "100px",
+				width: "35px",
 			}}
 			src="/rvu.png"
 			alt="RVU"
@@ -66,7 +66,7 @@ import Layout from "../layouts/Layout.astro";
 			<div class="lg:flex p-10">
 				<div>
 					<div>
-						<img src="/logo.png" alt="Logo" class="block h-16" />
+						<img src="/logo.png" alt="Logo" class="block w-40" />
 						<h1 class="my-heading">
 							<div class="block">2023</div>
 						</h1>
@@ -74,7 +74,7 @@ import Layout from "../layouts/Layout.astro";
 							<CountdownTimer client:load />
 						</div>
 						<p
-							class="p-5 bg-cyan-900 rounded-md text-gray-300 md:w-1/2"
+							class="p-5 bg-cyan-900 rounded-md text-gray-300 sm:max-w-md"
 						>
 							Code:F is an immersive web development program that
 							promotes collaboration. It offers engaging lectures,
@@ -92,12 +92,12 @@ import Layout from "../layouts/Layout.astro";
 								<span class="text-pink-300">Meet our team</span>
 							</a>
 						</p>
-						<div class="mt-10 overflow-scroll max-w-lg">
+						<div class="mt-10 overflow-scroll max-w-md">
 							<div
 								class="flex items-center justify-between bg-purple-100 px-2 py-1 rounded-t-md"
 							>
 								<div class="font-mono text-sm text-pink-800">
-									cat syllabus.text
+									see you soon
 								</div>
 							</div>
 							<TypingComponent client:load />
