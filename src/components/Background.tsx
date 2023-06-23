@@ -92,7 +92,7 @@ const ThreeJSAnimation = () => {
   }, []);
 
   return (
-    <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-black via-black to-pink-500">
+    <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-black via-black to-cyan-900">
       <div
         style={{ opacity: 0.9 }}
         className="hidden lg:block"

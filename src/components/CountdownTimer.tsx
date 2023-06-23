@@ -50,7 +50,7 @@ export const TypingComponent = () => {
   };
 
   return (
-    <div>
+    <div className="text-black">
       <p className="p-2 text-gray-800 bg-gray-300 font-mono text-xs w-lg">
         Output
       </p>
