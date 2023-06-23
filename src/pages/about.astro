@@ -14,7 +14,7 @@ import LaptopReminderBanner from "../components/LaptopReminderBanner";
         </Sectionhead>
 
         <div
-            class="text-white flex flex-col gap-3 mx-auto max-w-4xl mt-16 max-w-2xl leading-7 text-md text-center m-auto"
+            class="text-white flex flex-col gap-3 mx-auto max-w-4xl mt-16 max-w-2xl leading-7 text-md text-left m-auto"
         >
             <p class="font-bold mb-2">
                 Get prepared for an exhilarating journey! The CodeF program is
@@ -39,25 +39,33 @@ import LaptopReminderBanner from "../components/LaptopReminderBanner";
             <LaptopReminderBanner
                 msg="Reach out on the WhatsApp group for up to date information"
             />
-            <p class="max-w-2xl leading-7 text-md text-center mt-20 m-auto">
+            <p class="max-w-2xl leading-7 text-md mt-20 m-auto text-left">
                 The CodeF team consists of friendly professionals dedicated to
                 delivering exceptional results. With expertise and passion, we
                 strive to provide outstanding experiences and foster innovation
                 and success.
             </p>
-            <ul role="list" class="link-card-grid mt-20">
+            <ul role="list" class="mt-20 text-left mb-40">
+                <BusinessCard
+                    name="Oscar Hilton"
+                    profession="Primary Lecturer"
+                    imageURL="/team/oscar.jpeg"
+                />
+                <BusinessCard
+                    name="Hannah Lynn"
+                    profession="Secondary Lecturer"
+                    imageURL="/team/hannah.png"
+                />
                 <BusinessCard
                     name="Alvaro Iturmendi"
-                    profession="Paid Media"
+                    profession="Student Recruiter and Co-ordinator"
                     imageURL="/team/alvaro.jpeg"
                 />
                 <BusinessCard
                     name="Safiyah Raj"
                     imageURL="/team/safiyah.png"
-                    profession="Engineer liaison"
+                    profession="Engineer Liaison"
                 />
-            </ul>
-            <ul role="list" class="link-card-grid">
                 <BusinessCard
                     name="Kumsy Thomas"
                     profession="Product Manager"
@@ -66,19 +74,7 @@ import LaptopReminderBanner from "../components/LaptopReminderBanner";
                 <BusinessCard
                     name="Molly Hudson"
                     imageURL="/team/molly.png"
-                    profession="Internal recruiter and social media manager"
-                />
-            </ul>
-            <ul role="list" class="link-card-grid mb-40">
-                <BusinessCard
-                    name="Hannah Lynn"
-                    profession="Syllabus curator & Engineer"
-                    imageURL="/team/hannah.png"
-                />
-                <BusinessCard
-                    name="Oscar Hilton"
-                    profession="Syllabus curator & Senior Engineer"
-                    imageURL="/team/oscar.jpeg"
+                    profession="Internal Recruiter and Social Media Manager"
                 />
             </ul>
         </div>
