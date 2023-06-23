@@ -1,0 +1,91 @@
+---
+const talks = [
+    {
+        speaker: "Angus McCarey",
+        topic: "CEO Uswitch",
+        img: ["/talks/angus.jpg"],
+    },
+    {
+        speaker: "Hannah Lynn & Oscar Hilton",
+        topic: "Engineering",
+        img: ["/talks/hannah.jpg", "/talks/oscar.jpg"],
+    },
+    {
+        speaker: "Iva & Aliyyah",
+        topic: "CodeF ‘22 Participants",
+        img: ["/talks/none.png", "/talks/none.png"],
+    },
+    {
+        speaker: "Kumsy Thomas, Safiyah Raja & Pei Xian Liu",
+        topic: "Graduate Panel",
+        img: ["/talks/kumsy.jpg", "/talks/pei.jpg", "/talks/saf.jpg"],
+    },
+    {
+        speaker: "Amy Wang",
+        topic: "In-House Legal",
+        img: ["/talks/amy.jpg"],
+    },
+    {
+        speaker: "Alice Williams, Liane Ward & Lucy Pritchett",
+        topic: "Overview of Design",
+        img: ["/talks/alice.jpg", "/talks/liane.jpg"],
+    },
+    {
+        speaker: "Rachael Pollard",
+        topic: "CMO Uswitch: My Squiggly Career",
+        img: ["/talks/rachael.jpg"],
+    },
+    {
+        speaker: "Carla Simmons & Kate McManus",
+        topic: "Customer Marketing",
+        img: ["/talks/carla.jpg", "/talks/kate.jpg"],
+    },
+    {
+        speaker: "Lucy Moffat",
+        topic: "SEO: How to get your website to rank",
+        img: ["/talks/lucy.jpg"],
+    },
+    {
+        speaker: "Kasia Kowalczyk",
+        topic: "Data Analytics",
+        img: ["/talks/kasia.jpg"],
+    },
+    {
+        speaker: "Nick Hodgson",
+        topic: "Internship Opportunities",
+        img: ["/talks/nick.jpg"],
+    },
+    { speaker: "Tariq Syed", topic: "CEO RVU", img: ["/talks/tariq.jpg"] },
+];
+---
+
+<div class="my-10">
+    <h2 class="text-3xl my-10 block">This years speakers</h2>
+    <div class="grid sm:grid-cols-2 gap-4">
+        {
+            talks.map((talk) => (
+                <>
+                    <div class="bg-gray-700 text-pink-500 rounded-lg shadow px-5 py-6 sm:px-6 block">
+                        <div class="grid gap-2 grid-cols-3 ">
+                            {talk.img.map((i) => (
+                                <img
+                                    src={i}
+                                    alt={talk.speaker}
+                                    class="w-20 h-20 object-cover rounded-md mr-5 inline-block flex-grow"
+                                />
+                            ))}
+                        </div>
+                        <div class="col-span-2 mt-4">
+                            <div class="font-semibold text-xl">
+                                {talk.speaker}
+                            </div>
+                            <div class="bg-pink-500 font-medium text-sm font-mono inline-block text-purple-200 p-2 mt-4">
+                                {talk.topic}
+                            </div>
+                        </div>
+                    </div>
+                </>
+            ))
+        }
+    </div>
+</div>
