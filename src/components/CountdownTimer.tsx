@@ -14,9 +14,12 @@ export const TypingComponent = () => {
   const typingSpeed = 12; // Speed in milliseconds per character
   const deleteSpeed = 25; // Speed in milliseconds per character when deleting
 
+  const beepSoundRef = React.useRef();
+
   useEffect(() => {
     const typeMessage = async (message) => {
       for (let i = 0; i < message.length; i++) {
+        beepSoundRef.current.play();
         setMessage((prevMessage) => prevMessage + message[i]);
         await sleep(Math.random() * 10 + typingSpeed);
       }
@@ -51,6 +54,7 @@ export const TypingComponent = () => {
 
   return (
     <div className="text-black block">
+      <audio ref={beepSoundRef} src="beep.mp3" />
       <p className="p-2 text-gray-400 bg-gray-300 font-mono text-xs">
         ./output.sh
       </p>
