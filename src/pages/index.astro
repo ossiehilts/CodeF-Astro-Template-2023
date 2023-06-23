@@ -71,8 +71,8 @@ import Layout from "../layouts/Layout.astro";
 							<div class="block">2023</div>
 						</h1>
 						<CountdownTimer client:load />
-						<p class="text-white mt-10 lg:max-w-md text-xl">
-							Code F is an immersive web development program that
+						<p class="text-white mt-10 md:max-w-md text-xl">
+							Code:F is an immersive web development program that
 							promotes collaboration. It offers engaging lectures,
 							interactive workshops, and hands-on coding
 							experiences. The curriculum is comprehensive and
@@ -102,9 +102,13 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 				<a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
 					<div class="lg:mr-8 mt-5 mb-20 lg:float-right">
-						<span class="lg:text-8xl lg:rotate-12">&#x1F5FA;</span>
+						<span
+							class="lg:text-8xl lg:rotate-12 relative"
+							style={{ transform: "translateY(-5px)" }}
+							>&#x1F5FA;</span
+						>
 						<p
-							class="bg-pink-300 p-3 text-sm font-mono lg:animate-bounce rounded min-w-max inline-block lg:block shadow-md"
+							class="bg-pink-300 p-3 text-sm font-mono hover:animate-bounce rounded min-w-max inline-block lg:block shadow-md"
 						>
 							The Cooperage
 							<br /> 5 Copper Row
