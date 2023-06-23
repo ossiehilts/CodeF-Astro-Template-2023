@@ -55,11 +55,11 @@ export const TypingComponent = () => {
   return (
     <div className="text-black block">
       <audio ref={beepSoundRef} src="beep.mp3" />
-      <p className="p-2 text-gray-400 bg-gray-300 font-mono text-xs">
+      <p className="p-4 text-gray-400 bg-gray-300 font-mono text-xs">
         ./output.sh
       </p>
       <p
-        className="p-2 bg-gray-300 font-mono text-sm rounded-b-mdleading-6 rounded-b-lg"
+        className="p-4 bg-gray-300 font-mono text-sm rounded-b-mdleading-6 rounded-b-lg"
         dangerouslySetInnerHTML={{
           __html:
             message +
