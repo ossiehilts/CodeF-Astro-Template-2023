@@ -69,7 +69,7 @@ const ThreeJSAnimation = () => {
 
       // Rotate websites
       scene.children.forEach((website, i) => {
-        const rand = ((i + 58 * Math.random()) / 1000) * 0.8;
+        const rand = ((i + 58 * Math.random()) / 1000) * 0.4;
         website.rotation.x += rand;
         website.rotation.y += rand;
       });
