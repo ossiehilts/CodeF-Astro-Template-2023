@@ -55,7 +55,7 @@ export const TypingComponent = () => {
         Output
       </p>
       <p
-        className="p-2 bg-gray-300 font-mono text-sm rounded-b-md max-w-lg leading-6"
+        className="p-2 bg-gray-300 font-mono text-sm rounded-b-md max-w-lg leading-6 text-black"
         dangerouslySetInnerHTML={{
           __html:
             message +
