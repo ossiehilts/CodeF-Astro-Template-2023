@@ -101,7 +101,7 @@ const CountdownTimer = () => {
   });
 
   return (
-    <h2 className="text-3xl text-pink-300 text-left w-full block m-0 p-0 md:mt-2">
+    <h2 className="text-3xl text-left w-full block m-0 p-0 md:mt-2">
       <span>is {timeLeft.days} days, </span>
       <span>{timeLeft.hours} hours, </span>
       <span>{timeLeft.minutes} minutes, </span>
