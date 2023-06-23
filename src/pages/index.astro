@@ -12,7 +12,7 @@ import Layout from "../layouts/Layout.astro";
 	li,
 	strong,
 	span {
-		line-height: 180%;
+		line-height: 160%;
 	}
 
 	body,
@@ -106,10 +106,15 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 				<a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
 					<div class="lg:mr-8 mt-5 mb-20 lg:float-right">
-						<span class="lg:text-8xl lg:rotate-12 relative"
-							>&#x1F5FA;</span
+						<span
+							class="text-8xl lg:rotate-12 relative block"
+							style={{
+								transform:
+									"translate(-30px, 30px) rotate(-4deg); ",
+							}}>&#x1F5FA;</span
 						>
 						<p
+							style={{ transform: "translate(1px, 1px); " }}
 							class="bg-pink-300 p-3 text-sm font-mono rounded min-w-max inline-block lg:block shadow-md"
 						>
 							The Cooperage
