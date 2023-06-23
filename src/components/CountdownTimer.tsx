@@ -8,7 +8,7 @@ export const TypingComponent = () => {
     "&#128197; <span class='text-pink-500 font-extrabold'>Day 2</span> delves deeper into web development tools and interactive learning. Master the <span class='text-pink-500 font-extrabold'>basics of HTML, CSS, and JavaScript</span> through informative lectures and interactive sessions. You'll have hands-on experience building a <span class='text-pink-500 font-extrabold'>simple webpage</span> using CodeSandbox, while also exploring the power of pair programming and collaboration. Get ready to unleash your creativity and play exciting JavaScript games!",
     "&#128197; <span class='text-pink-500 font-extrabold'>Day 3</span> takes a step back to <span class='text-pink-500 font-extrabold'>explore low-level computing concepts</span>. Expand your knowledge with exposure to <span class='text-pink-500 font-extrabold'>hardware and fundamental computing concepts.</span> In the workshop hours, you'll continue developing your website using the tools and skills you've acquired. <span class='text-pink-500 font-extrabold'>Engage in pair programming and problem-solving activities</span> to enhance your coding abilities.",
     "&#128197; <span class='text-pink-500 font-extrabold'>On Day 4</span>, it's time to finalise and host your website. Review and troubleshoot your website, preparing it for deployment. Understand the intricacies of <span class='text-pink-500 font-extrabold'>hosting and domains</span>, and discover how to make your website publicly accessible using <a target='_blank' href='https://app.netlify.com/' class='text-blue-500 font-extrabold underline'>Netlify</a>. Engage in additional site improvements and deployments, all while reflecting on your learning journey and discussing future paths in web development.",
-    "T&#127881; The program culminates in the <span class='text-pink-500 font-extrabold'>Showcase</span>, where you'll have the opportunity to wrap up your projects and network with fellow participants. Share your accomplishments and celebrate your growth as a web developer.",
+    "&#127881; The program culminates in the <span class='text-pink-500 font-extrabold'>Showcase</span>, where you'll have the opportunity to wrap up your projects and network with fellow participants. Share your accomplishments and celebrate your growth as a web developer.",
     "&#129299; Throughout the curriculum, our team of experienced engineers will guide you, answering your questions and providing support. So bring your laptop and get ready to dive into the exciting world of web development with Code F Curriculum 2023. Let's unlock your potential and create the future together!",
   ].map((str) => "<span class='text-gray-400'>></span> " + str + "</br></br>");
   const typingSpeed = 12; // Speed in milliseconds per character
@@ -59,7 +59,7 @@ export const TypingComponent = () => {
         ./output.sh
       </p>
       <p
-        className="p-2 bg-gray-300 font-mono text-sm rounded-b-mdleading-6"
+        className="p-2 bg-gray-300 font-mono text-sm rounded-b-mdleading-6 rounded-b-lg"
         dangerouslySetInnerHTML={{
           __html:
             message +
