@@ -4,6 +4,7 @@ import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
 import BusinessCard from "../components/BusinessCard.astro";
 import LaptopReminderBanner from "../components/LaptopReminderBanner";
+import Talks from "../components/Talks.astro";
 ---
 
 <Layout title="About">
@@ -14,8 +15,17 @@ import LaptopReminderBanner from "../components/LaptopReminderBanner";
         </Sectionhead>
 
         <div
-            class="text-white flex flex-col gap-3 mx-auto max-w-4xl mt-16 max-w-2xl leading-8 text-xl text-left m-auto"
+            class="text-white flex flex-col gap-3 mx-auto max-w-4xl mt-16 max-w-2xl leading-8 text-xl text-left m-auto mb-40"
         >
+            <h2 class="text-3xl my-10 block">&#128276; Reminders</h2>
+            <LaptopReminderBanner />
+            <LaptopReminderBanner msg="Starts 9:00am Monday 26th" />
+            <LaptopReminderBanner msg="Ends Friday 30th 6pm or late" />
+            <LaptopReminderBanner msg="At the RVU London offices" />
+            <LaptopReminderBanner
+                msg="Reach out on the WhatsApp group for up to date information"
+            />
+            <h2 class="text-3xl my-10 block">Back for another year</h2>
             <img src="/codef.jpg" class="rounded-xl shadow-xl mb-10" />
             <p class="mb-2">
                 Get prepared for an exhilarating journey! The CodeF program is
@@ -33,57 +43,46 @@ import LaptopReminderBanner from "../components/LaptopReminderBanner";
                     class="text-pink-300">RVU.CodeF</a
                 >, where innovation meets community!
             </p>
-            <LaptopReminderBanner />
-            <LaptopReminderBanner msg="Starts 9:00am Monday 26th" />
-            <LaptopReminderBanner msg="Ends Friday 30th 6pm or late" />
-            <LaptopReminderBanner msg="At the RVU London offices" />
-            <LaptopReminderBanner
-                msg="Reach out on the WhatsApp group for up to date information"
-            />
-            <p class="max-w-2xl leading-7 text-md mt-20 m-auto text-left">
-                The CodeF team consists of friendly professionals dedicated to
-                delivering exceptional results. With expertise and passion, we
-                strive to provide outstanding experiences and foster innovation
-                and success.
-            </p>
-            <ul role="list" class="mt-20 text-left mb-40">
-                <BusinessCard
-                    name="Oscar Hilton"
-                    profession="Primary Lecturer"
-                    imageURL="/team/oscar.jpeg"
-                />
-                <BusinessCard
-                    name="Hannah Lynn"
-                    profession="Secondary Lecturer"
-                    imageURL="/team/hannah.png"
-                />
-                <BusinessCard
-                    name="Alvaro Iturmendi"
-                    profession="Student Recruiter and Co-ordinator"
-                    imageURL="/team/alvaro.jpeg"
-                />
-                <BusinessCard
-                    name="Safiyah Raj"
-                    imageURL="/team/safiyah.png"
-                    profession="Engineer Liaison"
-                />
-                <BusinessCard
-                    name="Kumsy Thomas"
-                    profession="Product Manager"
-                    imageURL="/team/kumsey.jpeg"
-                />
-                <BusinessCard
-                    name="Molly Hudson"
-                    imageURL="/team/molly.png"
-                    profession="Internal Recruiter and Social Media Manager"
-                />
-            </ul>
             <div>
                 <div class="container mx-auto px-4 mb-20">
+                    <h2 class="text-3xl my-10 block">The Team</h2>
+                    <ul role="list" class="text-left">
+                        <BusinessCard
+                            name="Oscar Hilton"
+                            profession="Primary Lecturer"
+                            imageURL="/team/oscar.jpeg"
+                        />
+                        <BusinessCard
+                            name="Hannah Lynn"
+                            profession="Secondary Lecturer"
+                            imageURL="/team/hannah.png"
+                        />
+                        <BusinessCard
+                            name="Alvaro Iturmendi"
+                            profession="Student Recruiter and Co-ordinator"
+                            imageURL="/team/alvaro.jpeg"
+                        />
+                        <BusinessCard
+                            name="Safiyah Raj"
+                            imageURL="/team/safiyah.png"
+                            profession="Engineer Liaison"
+                        />
+                        <BusinessCard
+                            name="Kumsy Thomas"
+                            profession="Product Manager"
+                            imageURL="/team/kumsey.jpeg"
+                        />
+                        <BusinessCard
+                            name="Molly Hudson"
+                            imageURL="/team/molly.png"
+                            profession="Internal Recruiter and Social Media Manager"
+                        />
+                    </ul>
+                    <Talks />
                     <h4 class="text-2xl mb-10 block">
                         With Special Thanks To:
                     </h4>
-                    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <ul class="grid sm:grid-cols-2 sm:grid-cols-3 gap-4">
                         <li
                             class="bg-gray-700 font-bold p-4 rounded shadow text-center"
                         >
