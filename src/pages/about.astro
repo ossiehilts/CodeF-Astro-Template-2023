@@ -2,8 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
-
 import BusinessCard from "../components/BusinessCard.astro";
+import LaptopReminderBanner from "../components/LaptopReminderBanner";
 ---
 
 <Layout title="About">
@@ -13,14 +13,60 @@ import BusinessCard from "../components/BusinessCard.astro";
             <Fragment slot="desc">The CodeF team!</Fragment>
         </Sectionhead>
 
-        <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-            <ul role="list" class="link-card-grid">
+        <div
+            class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 max-w-2xl leading-7 text-md text-center m-auto"
+        >
+            <p class="font-bold mb-2">
+                Get ready for an exciting journey! The CodeF program is set to
+                kick off next Monday, bringing together our talented team and
+                eager participants for an immersive and transformative
+                experience. With cutting-edge technology, expert guidance, and a
+                supportive community, we're ready to unlock new possibilities
+                and empower you to reach your coding goals. Mark your calendars
+                and join us as we embark on this thrilling adventure starting
+                next Monday. Stay tuned for an incredible learning journey that
+                will fuel your passion for coding and pave the way for future
+                success. Get ready to level up your skills and achieve great
+                things with CodeF!
+            </p>
+            <p class="text-lg font-bold mb-20">
+                Join us on our social platform, <a
+                    href="https://rvu.codef.com"
+                    target="_blank"
+                    class="text-pink-300">RVU.CodeF</a
+                >, where innovation meets community!
+            </p>
+            <LaptopReminderBanner />
+            <LaptopReminderBanner msg="Starts 9:00am Monday 26th" />
+            <LaptopReminderBanner msg="Ends Friday 30th 6pm or late" />
+            <LaptopReminderBanner msg="At the RVU London offices" />
+            <LaptopReminderBanner
+                msg="Reach out on the WhatsApp group for up to date information"
+            />
+            <p class="max-w-2xl leading-7 text-md text-center mt-20 m-auto">
+                The CodeF team is a friendly and skilled group of professionals
+                committed to their roles and dedicated to delivering exceptional
+                results. With expertise in paid media, engineering liaison,
+                product management, curriculum curation, and more, each team
+                member brings their unique talents and passion to the table.
+                Through collaboration and a supportive work environment, they
+                strive to provide the best possible experiences for our students
+                and partners. The CodeF team's friendly and welcoming atmosphere
+                fosters creativity, innovation, and success, ensuring that we
+                continue to deliver top-notch solutions and meet the needs of
+                our community in a positive and engaging way.
+            </p>
+            <ul role="list" class="link-card-grid mt-20">
                 <BusinessCard
                     name="Alvaro Iturmendi"
                     profession="Paid Media"
                     imageURL="/team/alvaro.jpeg"
                 />
-                <BusinessCard name="Safiyah Raj" imageURL="/team/safiyah.png" />
+                <BusinessCard
+                    name="Safiyah Raj"
+                    imageURL="/team/safiyah.png"
+                    profession="Engineer liaison"
+                />
             </ul>
             <ul role="list" class="link-card-grid">
                 <BusinessCard
@@ -28,22 +74,25 @@ import BusinessCard from "../components/BusinessCard.astro";
                     profession="Product Manager"
                     imageURL="/team/kumsey.jpeg"
                 />
-                <BusinessCard name="Molly Hudson" imageURL="/team/molly.png" />
-            </ul>
-            <ul role="list" class="link-card-grid">
                 <BusinessCard
-                    name="Oscar Hilton"
-                    profession="Primary lecturer"
-                    imageURL="/team/oscar.jpeg"
+                    name="Molly Hudson"
+                    imageURL="/team/molly.png"
+                    profession="Internal recruiter and social media manager"
                 />
+            </ul>
+            <ul role="list" class="link-card-grid mb-40">
                 <BusinessCard
                     name="Hannah Lynn"
-                    profession="Secondary lecturer"
+                    profession="Syllabus curator & Engineer"
                     imageURL="/team/hannah.png"
+                />
+                <BusinessCard
+                    name="Oscar Hilton"
+                    profession="Syllabus curator & Senior Engineer"
+                    imageURL="/team/oscar.jpeg"
                 />
             </ul>
         </div>
-        <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12"></div>
     </Container>
 </Layout>
 
