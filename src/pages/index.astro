@@ -1,7 +1,9 @@
 ---
-import CountdownTimer, { TypingComponent } from "../components/CountdownTimer";
-import WireframedWebsites from "../components/Background";
 import Layout from "../layouts/Layout.astro";
+import DayOne from "./day-one.astro";
+import DayTwo from "./day-two.astro";
+import Container from "../components/container.astro";
+import Celebration from "../components/Celebration";
 ---
 
 <style>
@@ -20,33 +22,6 @@ import Layout from "../layouts/Layout.astro";
 	li {
 		font-size: 1.1em;
 	}
-
-	.my-heading {
-		display: block;
-		width: 300px;
-		text-align: left;
-		font-weight: lighter;
-		color: transparent;
-		background: linear-gradient(to right, #00ff00, #bf00ff);
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		font-family: "Open Sans", sans-serif;
-		font-size: 120px;
-		animation: swirl 1s linear infinite;
-	}
-
-	@keyframes swirl {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
-	}
 </style>
 <Layout>
 	<a href="https://www.rvu.co.uk/">
@@ -61,93 +36,22 @@ import Layout from "../layouts/Layout.astro";
 			alt="RVU"
 		/>
 	</a>
-	<div class="m-auto w-full lg:w-2/3">
-		<div class="lg:flex lg:flex-row justify-center lg:p-10">
-			<div class="lg:flex p-10">
-				<div>
-					<div>
-						<img src="/logo.png" alt="Logo" class="block w-40" />
-						<h1 class="my-heading">
-							<div class="block">2023</div>
-						</h1>
-						<div class="text-pink-200 mb-20">
-							<CountdownTimer client:load />
-						</div>
-						<p
-							class="p-5 bg-cyan-900 rounded-md text-gray-300 sm:max-w-md"
-						>
-							Code:F is an immersive web development program that
-							promotes collaboration. It offers engaging lectures,
-							interactive workshops, and hands-on coding
-							experiences. The curriculum is comprehensive and
-							covers HTML, CSS, and JavaScript. Participants will
-							build projects, creating a fun and supportive
-							learning environment.{" "}
-							<a
-								class="mt-10 block"
-								href={"/about"}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<span class="text-pink-300"
-									>&#x1F495; Meet our team</span
-								>
-							</a>
-							<a
-								class="mt-1 block"
-								href={"https://www.instagram.com/rvu.codef/"}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<span class="text-pink-300"
-									>&#9996; Be social</span
-								>
-							</a>
-						</p>
-						<div class="mt-10 overflow-scroll max-w-md">
-							<div
-								class="flex items-center justify-between bg-purple-100 px-4 py-1 rounded-t-md"
-							>
-								<div class="font-mono text-sm text-pink-800">
-									see you soon
-								</div>
-							</div>
-							<TypingComponent client:load />
-						</div>
-					</div>
-				</div>
-				<a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
-					<div class="lg:mr-8 mt-5 mb-20 lg:float-right">
-						<span
-							class="text-8xl lg:rotate-12 relative block"
-							style={{
-								transform:
-									"translate(-30px, 30px) rotate(-4deg); ",
-							}}>&#x1F5FA;</span
-						>
-						<p
-							style={{ transform: "translate(1px, 1px); " }}
-							class="bg-pink-300 p-3 text-sm font-mono rounded min-w-max inline-block lg:block shadow-md"
-						>
-							The Cooperage
-							<br /> 5 Copper Row
-							<br /> London <br /> SE1 2LH
-						</p>
-					</div>
-				</a>
-			</div>
+	<Container>
+		<div class="container w-full">
+			<a href="https://goo.gl/maps/AG2HtjNx2TFBkWtJA">
+				<p
+					class="bg-pink-300 p-3 text-sm font-mono rounded min-w-max inline-block shadow-md"
+				>
+					The Cooperage
+					<br /> 5 Copper Row
+					<br /> London <br /> SE1 2LH
+				</p>
+			</a>
 		</div>
-	</div>
-	<div
-		style={{
-			zIndex: -1,
-			position: "fixed",
-			top: 0,
-			left: 0,
-			bottom: 0,
-			right: 0,
-		}}
-	>
-		<WireframedWebsites client:only />
-	</div>
+		<div class="bg-white rounded-xl mt-10 overflow-hidden mb-20">
+			<DayOne />
+			<DayTwo />
+			<Celebration />
+		</div>
+	</Container>
 </Layout>

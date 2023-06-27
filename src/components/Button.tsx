@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Button = ({ disabled, href }) => {
+const Button = ({ disabled, href, children = "Let's go!" }) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
       <button
@@ -9,7 +9,7 @@ const Button = ({ disabled, href }) => {
           !disabled ? "" : "bg-gradient-to-r from-purple-300 to-blue-100"
         }`}
       >
-        <span>Let's go!</span>
+        <span>{children}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

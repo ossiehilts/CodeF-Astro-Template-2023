@@ -5,20 +5,39 @@ import CodeSandbox from "../components/CodeSandbox.astro";
 import Button from "../components/Button";
 import TextAndImage from "../components/TextAndImage.astro";
 import List from "../components/List";
-import Celebration from "../components/Celebration";
 import Excalidraw from "../components/Excalidraw.astro";
 import WavingHand from "../components/WavingHand.astro";
-import PDF from "../components/PDF.astro";
 ---
 
-<Container>
-    <div class="max-w-3xl mx-auto p-8 text-gray-700">
-        <h2 class="text-6xl my-20 leading-normal">
+<div>
+    <img src="/day1/rvuteam.jpg" />
+    <div class="max-w-4xl mx-auto p-8 text-gray-700">
+        <h2 class="text-5xl my-20 leading-normal">
             <WavingHand />Welcome to your coding journey!
         </h2>
     </div>
 
     <div class="max-w-3xl mx-auto p-8 text-gray-700">
+        <h3 class="text-2xl font-semibold mb-5">Wrapping up Day 1</h3>
+        <div class="my-10">
+            <TextAndImage
+                title="Complete the Day 1 Workshop sheet"
+                content="This concise worksheet provides a systematic approach to website development. It starts by identifying the project's purpose and setting precise goals. Next, it helps outline your target audience, defining who would benefit from your website. The focus then shifts to the website's design, integrating wireframes and your unique branding elements. Finally, it offers a practical guide for managing weekly tasks, ensuring efficient progress towards your website development goals."
+                imageURL="/day1/design.webp"
+            />
+            <List
+                items={[
+                    "Grab the printout worksheet and begin filling in the right-hand side with all your creative ideas.",
+                    "Once you're finished, make sure to keep the worksheet in a safe place.",
+                    "Remember, you'll need to refer back to these ideas tomorrow, so ensure it's easily accessible!",
+                ]}
+            />
+        </div>
+    </div>
+    <Excalidraw />
+    <div class="max-w-3xl mx-auto p-8 text-gray-700">
+        <h3 class="text-2xl font-semibold mb-5">Starting day 2</h3>
+
         <TextAndImage
             title="First up, Github"
             content="You're making a great decision by choosing to learn how to code. As part of your course, you'll need to set up a GitHub account. Why, you ask? Well, GitHub is an essential tool used by millions of developers around the globe. It's where you'll store your code projects, collaborate with other learners, and even contribute to open-source projects later on."
@@ -80,31 +99,15 @@ import PDF from "../components/PDF.astro";
         <Button href="https://codesandbox.io/signin" />
         <!-- You can continue the list here -->
     </div>
-
-    <div class="max-w-3xl mx-auto p-8 text-gray-700">
-        <TextAndImage
-            title="Complete the Day 1 Workshop sheet"
-            content="This concise worksheet provides a systematic approach to website development. It starts by identifying the project's purpose and setting precise goals. Next, it helps outline your target audience, defining who would benefit from your website. The focus then shifts to the website's design, integrating wireframes and your unique branding elements. Finally, it offers a practical guide for managing weekly tasks, ensuring efficient progress towards your website development goals."
-            imageURL="/day1/design.webp"
-        />
-        <List
-            items={[
-                "Grab the printout worksheet and begin filling in the right-hand side with all your creative ideas.",
-                "Once you're finished, make sure to keep the worksheet in a safe place.",
-                "Remember, you'll need to refer back to these ideas tomorrow, so ensure it's easily accessible!",
-            ]}
-        />
-    </div>
-    <h3 class="text-xl font-semibold mb-2 mt-20">
-        Use Excalidraw below when prompted by the lecturer.
-    </h3>
-    <Excalidraw />
     <div class="max-w-3xl mx-auto p-8 text-gray-700">
         <TextAndImage
             title="And lastly, cloning the CodeF starter template "
             content="We're excited to introduce our development template that combines Astro and Tailwind CSS. Astro's innovative approach minimizes JavaScript, delivering swift, efficient websites. Tailwind CSS complements this by providing a utility-first framework for creating visually compelling, custom UIs with ease. This fusion simplifies your workflow, resulting in an enhanced performance and user experience. It's the perfect starting point for your web projects, let's push the boundaries of web development together!"
             imageURL="/day1/astro.webp"
         />
+        <Button href="https://codesandbox.io/invite/jxyiypk2iqikmbem">
+            Join the CodeF Organisation
+        </Button>
         <List
             items={[
                 "Navigate to the CodeSandbox window below these steps.",
@@ -116,6 +119,5 @@ import PDF from "../components/PDF.astro";
             ]}
         />
     </div>
-    <CodeSandbox basic sandbox="hopeful-sea-249w2x" />
-    <Celebration client:only />
-</Container>
+</div>
+<CodeSandbox basic sandbox="github/ossiehilts/CodeF-Starter-Template" />

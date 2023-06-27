@@ -1,14 +1,17 @@
 ---
 import WindowBar from "./WindowBar";
-const weburl =
-    "https://excalidraw.com/#room=4ae0453ed64911c85609,IX6eaCLG3NhSk2t2rfjgAQ";
+const weburl = "https://excalidraw.com";
 ---
 
 <section
     class="p-6 bg-gradient-to-r from-pink-400 via-red-500 to-yellow-500 text-white rounded-md shadow-md mb-20 my-5"
 >
     <div class="w-full relative h-96 pb-8">
-        <WindowBar webURL={weburl} title="Excalidraw" client:load />
+        <WindowBar
+            webURL={weburl}
+            title="Use Excalidraw below when prompted by the lecturer."
+            client:load
+        />
         <iframe
             style="absolute top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%"
             src={weburl}></iframe>
