@@ -19,7 +19,7 @@ const Celebration = () => {
         </div>
       ) : (
         <div
-          className={`p-8 bg-yellow-400 text-black w-full text-center rounded-md shadow-xl mb-20 w-full`}
+          className={`p-8 bg-yellow-400 text-black w-full text-center rounded-md shadow-xl w-full`}
         >
           <button className="text-2xl margin-auto" onClick={toggleCelebrate}>
             Finish for the day
